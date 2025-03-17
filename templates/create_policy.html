@@ -1,0 +1,219 @@
+{% extends 'base.html' %}
+
+{% block title %}Create Policy - Crypt+{% endblock %}
+
+{% block content %}
+<div class="flex justify-center">
+    <div class="w-full max-w-3xl">
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="bg-green-600 px-6 py-4">
+                <h4 class="text-xl font-bold text-white">Create Access Control Policy</h4>
+            </div>
+            <div class="px-6 py-6">
+                <form method="POST" action="{{ url_for('policy.create_policy') }}">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Policy Name</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                class="block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm"
+                                required
+                            >
+                        </div>
+                        
+                        <div>
+                            <label for="priority" class="block text-sm font-medium text-gray-700 mb-1">Priority</label>
+                            <select 
+                                id="priority" 
+                                name="priority" 
+                                class="block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm"
+                            >
+                                <option value="1">1 - Low</option>
+                                <option value="2">2 - Medium</option>
+                                <option value="3" selected>3 - High</option>
+                                <option value="4">4 - Critical</option>
+                                <option value="5">5 - Highest</option>
+                            </select>
+                            <p class="mt-1 text-sm text-gray-500">Higher priority policies are evaluated first.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="description" class="block text-sm font-medium text-gray-700 mb-1">Description</label>
+                        <textarea 
+                            id="description" 
+                            name="description" 
+                            rows="2"
+                            class="block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm"
+                        ></textarea>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex items-center">
+                            <label class="relative inline-flex items-center cursor-pointer">
+                                <input type="checkbox" class="sr-only peer" id="is_active" name="is_active" value="true" checked>
+                                <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-green-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-600"></div>
+                                <span class="ml-3 text-gray-700 font-medium">Active</span>
+                            </label>
+                        </div>
+                        <p class="mt-1 text-sm text-gray-500">Inactive policies won't be applied to any files.</p>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Attribute Requirements</label>
+                        <div class="bg-blue-50 border-l-4 border-blue-500 text-blue-700 p-4 mb-4" role="alert">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p>Select which user attributes are required to access files with this policy.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <span class="block text-sm font-medium text-gray-700 mb-2">Condition Type</span>
+                            <div class="space-y-2">
+                                <div class="flex items-center">
+                                    <input 
+                                        id="condition_or" 
+                                        name="condition_type" 
+                                        type="radio" 
+                                        value="OR" 
+                                        checked
+                                        class="focus:ring-green-500 h-4 w-4 text-green-600 border-gray-300"
+                                    >
+                                    <label for="condition_or" class="ml-3 block text-sm font-medium text-gray-700">
+                                        OR (Any selected attribute allows access)
+                                    </label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input 
+                                        id="condition_and" 
+                                        name="condition_type" 
+                                        type="radio" 
+                                        value="AND"
+                                        class="focus:ring-green-500 h-4 w-4 text-green-600 border-gray-300"
+                                    >
+                                    <label for="condition_and" class="ml-3 block text-sm font-medium text-gray-700">
+                                        AND (All selected attributes are required)
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        {% if attributes %}
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {% for attr in attributes %}
+                            <div class="bg-white border rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+                                <div class="p-4">
+                                    <div class="flex items-start">
+                                        <div class="flex h-5 items-center">
+                                            <input 
+                                                type="checkbox" 
+                                                class="h-4 w-4 rounded border-gray-300 text-green-600 focus:ring-green-500" 
+                                                name="attributes" 
+                                                value="{{ attr.name }}" 
+                                                id="attr-{{ attr.id }}"
+                                            >
+                                        </div>
+                                        <div class="ml-3">
+                                            <label for="attr-{{ attr.id }}" class="font-medium text-gray-900">{{ attr.name }}</label>
+                                            <p class="text-sm text-gray-500 mt-1">{{ attr.description }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div id="attribute-summary" class="mt-4"></div>
+                        {% else %}
+                        <div class="bg-yellow-50 border-l-4 border-yellow-500 text-yellow-700 p-4" role="alert">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p>No attributes available. Please <a href="{{ url_for('policy.list_attributes') }}" class="font-medium underline">create attributes</a> first.</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="flex justify-between pt-4 border-t border-gray-200">
+                        <a href="{{ url_for('policy.list_policies') }}" class="bg-white py-2 px-4 border border-gray-300 rounded-lg shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+                            Cancel
+                        </a>
+                        <button type="submit" class="bg-green-600 py-2 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+                            <i class="fas fa-shield-alt mr-2"></i> Create Policy
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Update attribute selection summary
+    function updateAttributeSelection() {
+        const selectedAttributes = document.querySelectorAll('input[name="attributes"]:checked');
+        const summaryElement = document.getElementById('attribute-summary');
+        const conditionType = document.querySelector('input[name="condition_type"]:checked').value;
+        
+        if (summaryElement) {
+            if (selectedAttributes.length > 0) {
+                let attributeNames = [];
+                selectedAttributes.forEach(function(attr) {
+                    const label = attr.parentElement.nextElementSibling.querySelector('label').textContent.trim();
+                    attributeNames.push(label);
+                });
+                
+                let conditionText = conditionType === 'AND' ? 
+                    'Users must have ALL of these attributes:' : 
+                    'Users must have ANY of these attributes:';
+                
+                summaryElement.innerHTML = `
+                    <div class="bg-green-50 border border-green-200 rounded-lg p-3 text-green-800 text-sm">
+                        <strong>${conditionText}</strong>
+                        <div class="mt-2 flex flex-wrap gap-2">
+                            ${attributeNames.map(name => 
+                                `<span class="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800">${name}</span>`
+                            ).join('')}
+                        </div>
+                    </div>
+                `;
+            } else {
+                summaryElement.innerHTML = `
+                    <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-3 text-yellow-800 text-sm">
+                        <strong>No attributes selected.</strong> This policy won't grant access to anyone.
+                    </div>
+                `;
+            }
+        }
+    }
+    
+    // Add event listeners to attribute checkboxes
+    document.querySelectorAll('input[name="attributes"]').forEach(function(checkbox) {
+        checkbox.addEventListener('change', updateAttributeSelection);
+    });
+    
+    // Add event listeners to condition type radios
+    document.querySelectorAll('input[name="condition_type"]').forEach(function(radio) {
+        radio.addEventListener('change', updateAttributeSelection);
+    });
+    
+    // Initial update
+    document.addEventListener('DOMContentLoaded', function() {
+        if (document.getElementById('attribute-summary')) {
+            updateAttributeSelection();
+        }
+    });
+</script>
+{% endblock %}

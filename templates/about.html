@@ -1,0 +1,178 @@
+{% extends 'base.html' %}
+
+{% block title %}About Crypt+ - Secure Data Access Control{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto">
+    <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <div class="px-6 py-8">
+            <h1 class="text-3xl font-bold text-gray-900 text-center mb-8">About Crypt+</h1>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="text-center">
+                    <div class="flex items-center justify-center h-20 w-20 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Secure Storage</h3>
+                    <p class="text-gray-600">Protecting your data's confidentiality with advanced encryption.</p>
+                </div>
+                <div class="text-center">
+                    <div class="flex items-center justify-center h-20 w-20 rounded-full bg-green-100 text-green-600 mx-auto mb-4">
+                        <i class="fas fa-key text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Access Control</h3>
+                    <p class="text-gray-600">Flexible, attribute-based policies for controlled data sharing.</p>
+                </div>
+                <div class="text-center">
+                    <div class="flex items-center justify-center h-20 w-20 rounded-full bg-purple-100 text-purple-600 mx-auto mb-4">
+                        <i class="fas fa-history text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Comprehensive Auditing</h3>
+                    <p class="text-gray-600">Robust tracking of all data access and policy changes.</p>
+                </div>
+            </div>
+            
+            <div class="mb-12">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">Introduction</h2>
+                <p class="text-gray-700 text-lg mb-4">
+                    The increasing adoption of storage services has revolutionized the way organizations manage and 
+                    store their data. However, this shift has also brought forth significant challenges related to 
+                    data security and access control.
+                </p>
+                <p class="text-gray-700">
+                    Ensuring that sensitive data remains secure while allowing appropriate access to authorized users 
+                    is paramount in storage environments. Crypt+ is designed to address these challenges by providing 
+                    a robust framework for secure and expressive data access control.
+                </p>
+            </div>
+            
+            <div class="mb-12">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">How It Works</h2>
+                
+                <div class="md:flex items-center mb-8">
+                    <div class="md:w-1/2 md:pr-8">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Initialization</h3>
+                        <p class="text-gray-700">
+                            Crypt+ initializes a complete framework including the Policy Decision Point (PDP), 
+                            Policy Enforcement Point (PEP), and Key Management Service (KMS) to provide a 
+                            comprehensive security solution.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 text-center mt-4 md:mt-0">
+                        <img src="{{ url_for('static', filename='img/initialization.svg') }}" alt="Initialization" class="max-h-40 mx-auto">
+                    </div>
+                </div>
+                
+                <div class="md:flex items-center flex-row-reverse mb-8">
+                    <div class="md:w-1/2 md:pl-8">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Data Encryption and Storage</h3>
+                        <p class="text-gray-700">
+                            Sensitive data is encrypted using attribute-based encryption (ABE) techniques, where 
+                            access policies are defined based on user attributes. This ensures that only authorized 
+                            users with the appropriate attributes can decrypt and access the data.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 text-center mt-4 md:mt-0">
+                        <img src="{{ url_for('static', filename='img/encryption.svg') }}" alt="Data Encryption" class="max-h-40 mx-auto">
+                    </div>
+                </div>
+                
+                <div class="md:flex items-center">
+                    <div class="md:w-1/2 md:pr-8">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Policy-Based Access Control</h3>
+                        <p class="text-gray-700">
+                            Crypt+ implements flexible, policy-based access control that allows administrators 
+                            to define complex access rules based on user attributes, roles, and other factors. 
+                            This provides granular control over who can access what data and under what conditions.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 text-center mt-4 md:mt-0">
+                        <img src="{{ url_for('static', filename='img/access_control.svg') }}" alt="Access Control" class="max-h-40 mx-auto">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mb-12">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">Future Scope</h2>
+                <p class="text-gray-700 mb-4">
+                    The future scope of Crypt+ encompasses several areas of development and enhancement to address 
+                    emerging challenges and leverage evolving technologies:
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 h-6 w-6 text-blue-500"><i class="fas fa-angle-right"></i></span>
+                                <div>
+                                    <span class="font-medium text-gray-900">Advanced Encryption Techniques:</span>
+                                    <span class="text-gray-700"> Integration with post-quantum cryptography</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 h-6 w-6 text-blue-500"><i class="fas fa-angle-right"></i></span>
+                                <div>
+                                    <span class="font-medium text-gray-900">Dynamic Policy Adaptation:</span>
+                                    <span class="text-gray-700"> Context-aware policies that adapt to changing conditions</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 h-6 w-6 text-blue-500"><i class="fas fa-angle-right"></i></span>
+                                <div>
+                                    <span class="font-medium text-gray-900">Blockchain Integration:</span>
+                                    <span class="text-gray-700"> Using blockchain for immutable audit trails</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 h-6 w-6 text-blue-500"><i class="fas fa-angle-right"></i></span>
+                                <div>
+                                    <span class="font-medium text-gray-900">AI-Enhanced Security:</span>
+                                    <span class="text-gray-700"> Machine learning for anomaly detection</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 h-6 w-6 text-blue-500"><i class="fas fa-angle-right"></i></span>
+                                <div>
+                                    <span class="font-medium text-gray-900">Multi-Cloud Support:</span>
+                                    <span class="text-gray-700"> Extending access control across multiple cloud providers</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 h-6 w-6 text-blue-500"><i class="fas fa-angle-right"></i></span>
+                                <div>
+                                    <span class="font-medium text-gray-900">User-Centric Controls:</span>
+                                    <span class="text-gray-700"> Simplified interfaces for policy management</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mb-12">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">Conclusion</h2>
+                <p class="text-gray-700 mb-4">
+                    Crypt+ provides a robust solution for secure and expressive data access control in storage environments. 
+                    Looking ahead, the future scope includes exploring advanced encryption techniques, dynamic policy adaptation, 
+                    integration with emerging technologies like blockchain and AI, and enhancing interoperability and standardization.
+                </p>
+                <p class="text-gray-700">
+                    Challenges such as quantum computing threats, multi-cloud support, and user-centric access control will 
+                    also be addressed to further improve the effectiveness and scalability of Crypt+, ensuring it remains 
+                    at the forefront of secure storage solutions.
+                </p>
+            </div>
+            
+            <div class="text-center">
+                <a href="{{ url_for('auth.register') }}" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    Get Started with Crypt+
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

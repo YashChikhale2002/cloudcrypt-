@@ -1,0 +1,248 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ file.name }} - Crypt+{% endblock %}
+
+{% block content %}
+<div class="mb-6 flex justify-between items-center">
+    <div>
+        <h1 class="text-3xl font-bold text-gray-900 mb-2">File Details</h1>
+        <nav class="flex" aria-label="Breadcrumb">
+            <ol class="flex items-center space-x-2">
+                <li>
+                    <a href="{{ url_for('dashboard') }}" class="text-gray-500 hover:text-gray-700">Dashboard</a>
+                </li>
+                <li class="flex items-center">
+                    <svg class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    <a href="{{ url_for('data.list_files') }}" class="ml-2 text-gray-500 hover:text-gray-700">Files</a>
+                </li>
+                <li class="flex items-center">
+                    <svg class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="ml-2 text-gray-600">{{ file.name }}</span>
+                </li>
+            </ol>
+        </nav>
+    </div>
+    <div class="flex space-x-2">
+        <a href="{{ url_for('data.download_file', file_id=file.id) }}" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg inline-flex items-center">
+            <i class="fas fa-download mr-2"></i> Download
+        </a>
+        {% if current_user.id == file.owner_id %}
+        <a href="{{ url_for('data.share_file', file_id=file.id) }}" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg inline-flex items-center">
+            <i class="fas fa-share-alt mr-2"></i> Share
+        </a>
+        {% endif %}
+    </div>
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <div class="lg:col-span-2">
+        <div class="bg-white rounded-lg shadow-md overflow-hidden mb-6">
+            <div class="bg-gray-50 px-6 py-4 flex justify-between items-center border-b border-gray-200">
+                <h2 class="text-lg font-medium text-gray-900">File Information</h2>
+                {% if file.encrypted %}
+                <span class="px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">Encrypted</span>
+                {% else %}
+                <span class="px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">Unencrypted</span>
+                {% endif %}
+            </div>
+            <div class="p-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <p class="text-sm"><span class="font-medium text-gray-700">Name:</span> <span class="text-gray-900">{{ file.name }}</span></p>
+                        <p class="text-sm"><span class="font-medium text-gray-700">Type:</span> <span class="text-gray-900">{{ file.file_type }}</span></p>
+                        <p class="text-sm"><span class="font-medium text-gray-700">Size:</span> <span class="text-gray-900">{{ file.size|filesizeformat }}</span></p>
+                        <p class="text-sm"><span class="font-medium text-gray-700">Owner:</span> <span class="text-gray-900">{{ file.owner.username }}</span></p>
+                    </div>
+                    <div>
+                        <p class="text-sm"><span class="font-medium text-gray-700">Uploaded:</span> <span class="text-gray-900">{{ file.created_at.strftime('%Y-%m-%d %H:%M') }}</span></p>
+                        <p class="text-sm"><span class="font-medium text-gray-700">Last Modified:</span> <span class="text-gray-900">{{ file.updated_at.strftime('%Y-%m-%d %H:%M') }}</span></p>
+                        {% if file.encrypted %}
+                        <p class="text-sm"><span class="font-medium text-gray-700">Hash:</span> <span class="text-gray-500 text-xs break-all">{{ file.content_hash[:16] }}...</span></p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        {% if current_user.id == file.owner_id %}
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
+                <h2 class="text-lg font-medium text-gray-900">Applied Policies</h2>
+            </div>
+            <div class="p-6">
+                {% if file.policies %}
+                <div class="space-y-3">
+                    {% for policy in file.policies %}
+                    <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-md font-medium text-gray-900">{{ policy.name }}</h3>
+                            {% if policy.is_active %}
+                            <span class="px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">Active</span>
+                            {% else %}
+                            <span class="px-2 py-1 text-xs font-semibold rounded-full bg-gray-100 text-gray-800">Inactive</span>
+                            {% endif %}
+                        </div>
+                        <p class="text-sm text-gray-600 mt-1">{{ policy.description }}</p>
+                        <p class="text-xs text-gray-500 mt-1">Priority: {{ policy.priority }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="mt-4">
+                    <a href="{{ url_for('data.share_file', file_id=file.id) }}" class="text-sm text-blue-600 hover:text-blue-800 flex items-center">
+                        <i class="fas fa-edit mr-1"></i> Modify Policies
+                    </a>
+                </div>
+                {% else %}
+                <div class="bg-blue-50 border-l-4 border-blue-500 text-blue-700 p-4">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                        <div class="ml-3">
+                            <p>No policies applied. Only you can access this file.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <a href="{{ url_for('data.share_file', file_id=file.id) }}" class="text-sm text-blue-600 hover:text-blue-800 flex items-center">
+                        <i class="fas fa-share-alt mr-1"></i> Share with Others
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    
+    <div class="space-y-6">
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
+                <h2 class="text-lg font-medium text-gray-900">Actions</h2>
+            </div>
+            <div class="p-6">
+                <div class="space-y-3">
+                    <a href="{{ url_for('data.download_file', file_id=file.id) }}" class="w-full inline-flex justify-center items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                        <i class="fas fa-download mr-2"></i> Download File
+                    </a>
+                    
+                    {% if current_user.id == file.owner_id %}
+                    <a href="{{ url_for('data.share_file', file_id=file.id) }}" class="w-full inline-flex justify-center items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+                        <i class="fas fa-share-alt mr-2"></i> Share File
+                    </a>
+                    
+                    <a href="{{ url_for('data.file_audit', file_id=file.id) }}" class="w-full inline-flex justify-center items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500">
+                        <i class="fas fa-history mr-2"></i> View Access Logs
+                    </a>
+                    
+                    <button type="button" class="w-full inline-flex justify-center items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500" data-modal-target="deleteModal" id="delete-button">
+                        <i class="fas fa-trash-alt mr-2"></i> Delete File
+                    </button>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        
+        {% if file.encrypted %}
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
+                <h2 class="text-lg font-medium text-gray-900">Security Information</h2>
+            </div>
+            <div class="p-6">
+                <div class="space-y-2">
+                    <p class="text-sm flex items-center">
+                        <i class="fas fa-lock text-green-500 mr-2"></i>
+                        <span class="font-medium text-gray-700">Encryption:</span>
+                        <span class="ml-2 text-gray-900">AES-256-GCM</span>
+                    </p>
+                    <p class="text-sm flex items-center">
+                        <i class="fas fa-key text-green-500 mr-2"></i>
+                        <span class="font-medium text-gray-700">Key Type:</span>
+                        <span class="ml-2 text-gray-900">Attribute-Based</span>
+                    </p>
+                    <p class="text-sm flex items-center">
+                        <i class="fas fa-shield-alt text-green-500 mr-2"></i>
+                        <span class="font-medium text-gray-700">Integrity:</span>
+                        <span class="ml-2 text-gray-900">SHA-256</span>
+                    </p>
+                </div>
+                
+                <div class="mt-4 bg-blue-50 border-l-4 border-blue-500 text-blue-700 p-4 text-sm">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                        <div class="ml-3">
+                            <p>This file is encrypted and can only be accessed by users with permission according to the applied policies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<!-- Delete Confirmation Modal -->
+{% if current_user.id == file.owner_id %}
+<div id="deleteModal" class="fixed inset-0 z-10 overflow-y-auto hidden">
+    <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+        <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+        </div>
+
+        <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+            <div class="bg-red-600 px-6 py-4">
+                <h3 class="text-lg font-medium text-white">Confirm Delete</h3>
+            </div>
+            <div class="bg-white px-6 py-4">
+                <p class="text-sm text-gray-800 mb-4">Are you sure you want to delete the file <strong>{{ file.name }}</strong>?</p>
+                <p class="text-red-600 text-sm font-medium flex items-center mb-4">
+                    <i class="fas fa-exclamation-triangle mr-2"></i> This action cannot be undone.
+                </p>
+            </div>
+            <div class="bg-gray-50 px-6 py-3 flex justify-end">
+                <button type="button" class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 mr-3" id="cancel-delete">
+                    Cancel
+                </button>
+                <form action="{{ url_for('data.delete_file', file_id=file.id) }}" method="POST">
+                    <button type="submit" class="bg-red-600 py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+                        Delete File
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+{% if current_user.id == file.owner_id %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const deleteButton = document.getElementById('delete-button');
+        const deleteModal = document.getElementById('deleteModal');
+        const cancelButton = document.getElementById('cancel-delete');
+        
+        deleteButton.addEventListener('click', function() {
+            deleteModal.classList.remove('hidden');
+        });
+        
+        cancelButton.addEventListener('click', function() {
+            deleteModal.classList.add('hidden');
+        });
+        
+        // Close modal when clicking outside
+        deleteModal.addEventListener('click', function(event) {
+            if (event.target === deleteModal) {
+                deleteModal.classList.add('hidden');
+            }
+        });
+    });
+</script>
+{% endif %}
+{% endblock %}

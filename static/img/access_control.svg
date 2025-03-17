@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="gradient5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#28a745" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#28a745" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="#f5fef7"/>
+  
+  <!-- Data Repository -->
+  <rect x="270" y="100" width="80" height="100" rx="5" fill="#f0fff0" stroke="#28a745" stroke-width="2"/>
+  <text x="310" y="155" font-family="Arial" font-size="14" text-anchor="middle" fill="#28a745">Data</text>
+  
+  <!-- Policy Gate -->
+  <rect x="160" y="120" width="80" height="60" rx="5" fill="url(#gradient5)" stroke="#28a745" stroke-width="2"/>
+  <text x="200" y="155" font-family="Arial" font-size="14" text-anchor="middle" fill="#fff">Policy</text>
+  
+  <!-- Users -->
+  <circle cx="70" cy="90" r="20" fill="#f0fff0" stroke="#28a745" stroke-width="2"/>
+  <path d="M70 85 C70 85, 75 80, 80 85 M60 85 C60 85, 65 80, 70 85" stroke="#28a745" stroke-width="1.5"/>
+  <circle cx="70" cy="80" r="3" fill="#28a745"/>
+  <path d="M60 95 Q70 105, 80 95" stroke="#28a745" stroke-width="1.5" fill="none"/>
+  
+  <circle cx="70" cy="150" r="20" fill="#f0fff0" stroke="#28a745" stroke-width="2"/>
+  <path d="M70 145 C70 145, 75 140, 80 145 M60 145 C60 145, 65 140, 70 145" stroke="#28a745" stroke-width="1.5"/>
+  <circle cx="70" cy="140" r="3" fill="#28a745"/>
+  <path d="M60 155 Q70 165, 80 155" stroke="#28a745" stroke-width="1.5" fill="none"/>
+  
+  <circle cx="70" cy="210" r="20" fill="#f0fff0" stroke="#28a745" stroke-width="2"/>
+  <path d="M70 205 C70 205, 75 200, 80 205 M60 205 C60 205, 65 200, 70 205" stroke="#28a745" stroke-width="1.5"/>
+  <circle cx="70" cy="200" r="3" fill="#28a745"/>
+  <path d="M60 215 Q70 225, 80 215" stroke="#28a745" stroke-width="1.5" fill="none"/>
+  
+  <!-- Connection Lines -->
+  <line x1="90" y1="90" x2="160" y2="130" stroke="#28a745" stroke-width="2"/>
+  <line x1="90" y1="150" x2="160" y2="150" stroke="#28a745" stroke-width="2"/>
+  <line x1="90" y1="210" x2="160" y2="170" stroke="#28a745" stroke-width="2"/>
+  
+  <!-- Access Line - Success -->
+  <line x1="240" y1="130" x2="270" y2="130" stroke="#28a745" stroke-width="2"/>
+  <polygon points="265,125 275,130 265,135" fill="#28a745"/>
+  
+  <!-- Access Line - Denied -->
+  <line x1="240" y1="170" x2="255" y2="170" stroke="#dc3545" stroke-width="2"/>
+  <line x1="250" y1="165" x2="260" y2="175" stroke="#dc3545" stroke-width="2"/>
+  <line x1="250" y1="175" x2="260" y2="165" stroke="#dc3545" stroke-width="2"/>
+  
+  <!-- Attribute Tags -->
+  <rect x="100" y="70" width="40" height="20" rx="10" fill="#28a745" opacity="0.7"/>
+  <text x="120" y="84" font-family="Arial" font-size="10" text-anchor="middle" fill="#fff">Admin</text>
+  
+  <rect x="100" y="130" width="40" height="20" rx="10" fill="#28a745" opacity="0.7"/>
+  <text x="120" y="144" font-family="Arial" font-size="10" text-anchor="middle" fill="#fff">Editor</text>
+  
+  <rect x="100" y="190" width="40" height="20" rx="10" fill="#dc3545" opacity="0.7"/>
+  <text x="120" y="204" font-family="Arial" font-size="10" text-anchor="middle" fill="#fff">Guest</text>
+</svg>

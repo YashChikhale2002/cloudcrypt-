@@ -1,0 +1,11 @@
+flask==2.0.1
+werkzeug==2.0.1
+flask-login==0.5.0
+flask-wtf==1.0.0
+pycryptodome==3.17.0
+python-dotenv==1.0.0
+sqlalchemy==1.4.40
+cryptography==39.0.1
+pyopenssl==23.0.0
+attrs==22.2.0
+bcrypt==4.0.1

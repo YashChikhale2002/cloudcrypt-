@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3a61fa" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#3a61fa" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="#f8f9ff"/>
+  
+  <!-- Document -->
+  <rect x="100" y="80" width="80" height="100" fill="white" stroke="#3a61fa" stroke-width="2"/>
+  <line x1="120" y1="100" x2="160" y2="100" stroke="#3a61fa" stroke-width="2"/>
+  <line x1="120" y1="120" x2="160" y2="120" stroke="#3a61fa" stroke-width="2"/>
+  <line x1="120" y1="140" x2="160" y2="140" stroke="#3a61fa" stroke-width="2"/>
+  <line x1="120" y1="160" x2="140" y2="160" stroke="#3a61fa" stroke-width="2"/>
+  
+  <!-- Lock -->
+  <rect x="210" y="120" width="60" height="40" rx="5" fill="#3a61fa"/>
+  <rect x="220" y="100" width="40" height="30" rx="15" fill="none" stroke="#3a61fa" stroke-width="8"/>
+  <circle cx="240" cy="140" r="5" fill="white"/>
+  
+  <!-- Encryption Arrows -->
+  <path d="M190 130 L205 130 M185 120 L190 130 L185 140" fill="none" stroke="#3a61fa" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Binary -->
+  <text x="280" y="110" font-family="monospace" font-size="12" fill="#3a61fa">101101</text>
+  <text x="280" y="130" font-family="monospace" font-size="12" fill="#3a61fa">010010</text>
+  <text x="280" y="150" font-family="monospace" font-size="12" fill="#3a61fa">110101</text>
+  <text x="280" y="170" font-family="monospace" font-size="12" fill="#3a61fa">001011</text>
+</svg>

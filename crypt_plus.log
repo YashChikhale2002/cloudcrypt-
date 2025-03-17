@@ -1,0 +1,322 @@
+2025-03-16 23:28:12,145 - werkzeug - INFO -  * Restarting with stat
+2025-03-16 23:28:13,009 - werkzeug - WARNING -  * Debugger is active!
+2025-03-16 23:28:13,015 - werkzeug - INFO -  * Debugger PIN: 767-236-480
+2025-03-16 23:28:13,043 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-03-16 23:28:15,862 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:28:15] "GET / HTTP/1.1" 200 -
+2025-03-16 23:28:15,979 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:28:15] "[35m[1mGET /static/img/data_security.svg HTTP/1.1[0m" 500 -
+2025-03-16 23:28:15,980 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:28:15] "[35m[1mGET /static/img/security_illustration.svg HTTP/1.1[0m" 500 -
+2025-03-16 23:28:16,030 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:28:16] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-03-16 23:28:16,030 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:28:16] "GET /static/css/main.css HTTP/1.1" 200 -
+2025-03-16 23:28:21,281 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:28:21] "GET / HTTP/1.1" 200 -
+2025-03-16 23:28:21,372 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:28:21] "GET /static/css/main.css HTTP/1.1" 200 -
+2025-03-16 23:28:21,428 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:28:21] "[35m[1mGET /static/img/data_security.svg HTTP/1.1[0m" 500 -
+2025-03-16 23:28:21,430 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:28:21] "[35m[1mGET /static/img/security_illustration.svg HTTP/1.1[0m" 500 -
+2025-03-16 23:28:21,691 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:28:21] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-03-16 23:34:23,426 - werkzeug - INFO -  * Restarting with stat
+2025-03-16 23:34:24,252 - werkzeug - WARNING -  * Debugger is active!
+2025-03-16 23:34:24,255 - werkzeug - INFO -  * Debugger PIN: 767-236-480
+2025-03-16 23:34:24,288 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-03-16 23:34:28,720 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:34:28] "GET / HTTP/1.1" 200 -
+2025-03-16 23:34:28,944 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:34:28] "GET /img/data_security.svg HTTP/1.1" 200 -
+2025-03-16 23:34:28,946 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:34:28] "GET /img/security_illustration.svg HTTP/1.1" 200 -
+2025-03-16 23:34:28,946 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:34:28] "GET /css/main.css HTTP/1.1" 200 -
+2025-03-16 23:34:28,991 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:34:28] "GET /js/main.js HTTP/1.1" 200 -
+2025-03-16 23:34:32,123 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:34:32] "GET /auth/register HTTP/1.1" 200 -
+2025-03-16 23:34:32,147 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:34:32] "[36mGET /css/main.css HTTP/1.1[0m" 304 -
+2025-03-16 23:34:32,150 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:34:32] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2025-03-16 23:35:17,364 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:35:17] "[32mPOST /auth/register HTTP/1.1[0m" 302 -
+2025-03-16 23:35:17,377 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:35:17] "GET /auth/login HTTP/1.1" 200 -
+2025-03-16 23:35:17,407 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:35:17] "[36mGET /css/main.css HTTP/1.1[0m" 304 -
+2025-03-16 23:35:17,409 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:35:17] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2025-03-16 23:35:45,322 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:35:45] "POST /auth/login HTTP/1.1" 200 -
+2025-03-16 23:35:45,348 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:35:45] "[36mGET /css/main.css HTTP/1.1[0m" 304 -
+2025-03-16 23:35:45,354 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:35:45] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2025-03-16 23:35:56,326 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:35:56] "POST /auth/login HTTP/1.1" 200 -
+2025-03-16 23:35:56,344 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:35:56] "[36mGET /css/main.css HTTP/1.1[0m" 304 -
+2025-03-16 23:35:56,349 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:35:56] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2025-03-16 23:36:02,116 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:36:02] "GET /auth/register HTTP/1.1" 200 -
+2025-03-16 23:36:02,131 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:36:02] "[36mGET /css/main.css HTTP/1.1[0m" 304 -
+2025-03-16 23:36:02,139 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:36:02] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2025-03-16 23:36:26,063 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:36:26] "GET /auth/login HTTP/1.1" 200 -
+2025-03-16 23:36:26,089 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:36:26] "[36mGET /css/main.css HTTP/1.1[0m" 304 -
+2025-03-16 23:36:26,097 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:36:26] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2025-03-16 23:36:27,984 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:36:27] "[36mGET /css/main.css HTTP/1.1[0m" 304 -
+2025-03-16 23:36:58,956 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:36:58] "POST /auth/login HTTP/1.1" 200 -
+2025-03-16 23:36:58,989 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:36:58] "[36mGET /css/main.css HTTP/1.1[0m" 304 -
+2025-03-16 23:36:58,992 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:36:58] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2025-03-16 23:37:40,549 - controllers.auth - INFO - User abhi logged in
+2025-03-16 23:37:40,550 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:37:40] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-03-16 23:37:40,573 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:37:40] "GET /dashboard HTTP/1.1" 200 -
+2025-03-16 23:37:40,598 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:37:40] "[36mGET /css/main.css HTTP/1.1[0m" 304 -
+2025-03-16 23:37:40,602 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:37:40] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2025-03-16 23:37:48,121 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:37:48] "GET /data/upload HTTP/1.1" 200 -
+2025-03-16 23:37:48,143 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:37:48] "[36mGET /css/main.css HTTP/1.1[0m" 304 -
+2025-03-16 23:37:48,149 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:37:48] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2025-03-16 23:41:54,353 - controllers.auth - INFO - User abhi logged out
+2025-03-16 23:41:54,354 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:41:54] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+2025-03-16 23:41:54,371 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:41:54] "GET /auth/login HTTP/1.1" 200 -
+2025-03-16 23:41:56,283 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:41:56] "GET /auth/login HTTP/1.1" 200 -
+2025-03-16 23:53:10,609 - werkzeug - INFO -  * Restarting with stat
+2025-03-16 23:53:13,554 - werkzeug - WARNING -  * Debugger is active!
+2025-03-16 23:53:13,564 - werkzeug - INFO -  * Debugger PIN: 767-236-480
+2025-03-16 23:53:13,643 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-03-16 23:53:36,948 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:53:36] "GET /auth/login HTTP/1.1" 200 -
+2025-03-16 23:57:55,725 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:57:55] "GET /auth/login HTTP/1.1" 200 -
+2025-03-16 23:57:57,149 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 23:57:57] "GET /auth/login HTTP/1.1" 200 -
+2025-03-17 00:05:18,047 - werkzeug - INFO -  * Restarting with stat
+2025-03-17 00:05:19,927 - werkzeug - WARNING -  * Debugger is active!
+2025-03-17 00:05:19,935 - werkzeug - INFO -  * Debugger PIN: 767-236-480
+2025-03-17 00:05:20,004 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-03-17 00:05:36,600 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 00:05:36] "GET /auth/login HTTP/1.1" 200 -
+2025-03-17 00:05:37,491 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 00:05:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-17 00:05:40,185 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 00:05:40] "GET /auth/login HTTP/1.1" 200 -
+2025-03-17 00:09:03,505 - werkzeug - INFO -  * Detected change in 'D:\\projects\\cloudcrypt\\crypt_plus\\app.py', reloading
+2025-03-17 00:09:03,812 - werkzeug - INFO -  * Restarting with stat
+2025-03-17 00:09:35,552 - werkzeug - INFO -  * Restarting with stat
+2025-03-17 00:09:37,484 - werkzeug - WARNING -  * Debugger is active!
+2025-03-17 00:09:37,490 - werkzeug - INFO -  * Debugger PIN: 767-236-480
+2025-03-17 00:09:37,555 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-03-17 00:09:37,667 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 00:09:37] "GET /auth/login HTTP/1.1" 200 -
+2025-03-17 00:10:44,691 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 00:10:44] "GET /auth/login HTTP/1.1" 200 -
+2025-03-17 10:42:05,720 - werkzeug - INFO -  * Restarting with stat
+2025-03-17 10:42:07,597 - werkzeug - WARNING -  * Debugger is active!
+2025-03-17 10:42:07,607 - werkzeug - INFO -  * Debugger PIN: 767-236-480
+2025-03-17 10:42:07,677 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-03-17 10:42:14,125 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:42:14] "GET / HTTP/1.1" 200 -
+2025-03-17 10:42:14,429 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:42:14] "GET /img/security_illustration.svg HTTP/1.1" 200 -
+2025-03-17 10:42:14,430 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:42:14] "GET /img/data_security.svg HTTP/1.1" 200 -
+2025-03-17 10:42:15,341 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:42:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-17 10:44:06,191 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:44:06] "GET / HTTP/1.1" 200 -
+2025-03-17 10:44:06,235 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:44:06] "GET /img/security_illustration.svg HTTP/1.1" 200 -
+2025-03-17 10:44:06,248 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:44:06] "GET /img/data_security.svg HTTP/1.1" 200 -
+2025-03-17 10:44:06,716 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:44:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-17 10:44:07,637 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:44:07] "GET / HTTP/1.1" 200 -
+2025-03-17 10:44:07,668 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:44:07] "GET /img/security_illustration.svg HTTP/1.1" 200 -
+2025-03-17 10:44:07,670 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:44:07] "GET /img/data_security.svg HTTP/1.1" 200 -
+2025-03-17 10:44:07,951 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:44:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-17 10:44:33,040 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:44:33] "GET / HTTP/1.1" 200 -
+2025-03-17 10:44:33,072 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:44:33] "[36mGET /img/security_illustration.svg HTTP/1.1[0m" 304 -
+2025-03-17 10:44:33,082 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:44:33] "[36mGET /img/data_security.svg HTTP/1.1[0m" 304 -
+2025-03-17 10:44:58,518 - werkzeug - INFO -  * Restarting with stat
+2025-03-17 10:45:00,152 - werkzeug - WARNING -  * Debugger is active!
+2025-03-17 10:45:00,169 - werkzeug - INFO -  * Debugger PIN: 767-236-480
+2025-03-17 10:45:00,233 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-03-17 10:45:00,451 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:45:00] "GET / HTTP/1.1" 200 -
+2025-03-17 10:45:00,575 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:45:00] "[36mGET /img/security_illustration.svg HTTP/1.1[0m" 304 -
+2025-03-17 10:45:00,669 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:45:00] "[36mGET /img/data_security.svg HTTP/1.1[0m" 304 -
+2025-03-17 10:45:02,953 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:45:02] "GET / HTTP/1.1" 200 -
+2025-03-17 10:45:03,002 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:45:03] "[36mGET /img/security_illustration.svg HTTP/1.1[0m" 304 -
+2025-03-17 10:45:03,024 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:45:03] "[36mGET /img/data_security.svg HTTP/1.1[0m" 304 -
+2025-03-17 10:45:08,006 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:45:08] "GET /auth/register HTTP/1.1" 200 -
+2025-03-17 10:45:10,286 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:45:10] "GET /auth/register HTTP/1.1" 200 -
+2025-03-17 10:45:12,386 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:45:12] "GET /about HTTP/1.1" 200 -
+2025-03-17 10:45:12,428 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:45:12] "GET /img/initialization.svg HTTP/1.1" 200 -
+2025-03-17 10:45:12,433 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:45:12] "GET /img/encryption.svg HTTP/1.1" 200 -
+2025-03-17 10:45:12,738 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:45:12] "GET /img/access_control.svg HTTP/1.1" 200 -
+2025-03-17 10:47:03,238 - werkzeug - INFO -  * Restarting with stat
+2025-03-17 10:47:04,985 - werkzeug - WARNING -  * Debugger is active!
+2025-03-17 10:47:04,993 - werkzeug - INFO -  * Debugger PIN: 767-236-480
+2025-03-17 10:47:05,059 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-03-17 10:47:05,109 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:47:05] "GET /about HTTP/1.1" 200 -
+2025-03-17 10:47:05,368 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:47:05] "[36mGET /img/initialization.svg HTTP/1.1[0m" 304 -
+2025-03-17 10:47:05,371 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:47:05] "[36mGET /img/encryption.svg HTTP/1.1[0m" 304 -
+2025-03-17 10:47:05,566 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:47:05] "[36mGET /img/access_control.svg HTTP/1.1[0m" 304 -
+2025-03-17 10:47:07,590 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:47:07] "GET / HTTP/1.1" 200 -
+2025-03-17 10:47:07,627 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:47:07] "[36mGET /img/security_illustration.svg HTTP/1.1[0m" 304 -
+2025-03-17 10:47:07,640 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:47:07] "[36mGET /img/data_security.svg HTTP/1.1[0m" 304 -
+2025-03-17 10:47:10,935 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:47:10] "GET / HTTP/1.1" 200 -
+2025-03-17 10:47:10,978 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:47:10] "[36mGET /img/security_illustration.svg HTTP/1.1[0m" 304 -
+2025-03-17 10:47:10,990 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:47:10] "[36mGET /img/data_security.svg HTTP/1.1[0m" 304 -
+2025-03-17 10:56:32,123 - werkzeug - INFO -  * Restarting with stat
+2025-03-17 10:56:33,750 - werkzeug - WARNING -  * Debugger is active!
+2025-03-17 10:56:33,760 - werkzeug - INFO -  * Debugger PIN: 767-236-480
+2025-03-17 10:56:33,933 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-03-17 10:56:35,321 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:56:35] "GET / HTTP/1.1" 200 -
+2025-03-17 10:56:35,362 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:56:35] "[33mGET /css/styles.css HTTP/1.1[0m" 404 -
+2025-03-17 10:56:35,633 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:56:35] "[36mGET /img/security_illustration.svg HTTP/1.1[0m" 304 -
+2025-03-17 10:56:35,635 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:56:35] "[36mGET /img/data_security.svg HTTP/1.1[0m" 304 -
+2025-03-17 10:56:37,754 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:56:37] "GET / HTTP/1.1" 200 -
+2025-03-17 10:56:37,785 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:56:37] "[33mGET /css/styles.css HTTP/1.1[0m" 404 -
+2025-03-17 10:56:37,799 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:56:37] "[36mGET /img/security_illustration.svg HTTP/1.1[0m" 304 -
+2025-03-17 10:56:37,800 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:56:37] "[36mGET /img/data_security.svg HTTP/1.1[0m" 304 -
+2025-03-17 10:56:46,146 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:56:46] "GET / HTTP/1.1" 200 -
+2025-03-17 10:56:46,182 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:56:46] "[33mGET /css/styles.css HTTP/1.1[0m" 404 -
+2025-03-17 10:56:46,194 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:56:46] "[36mGET /img/data_security.svg HTTP/1.1[0m" 304 -
+2025-03-17 10:56:46,198 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:56:46] "[36mGET /img/security_illustration.svg HTTP/1.1[0m" 304 -
+2025-03-17 10:58:26,370 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:58:26] "GET / HTTP/1.1" 200 -
+2025-03-17 10:58:26,423 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:58:26] "[33mGET /css/styles.css HTTP/1.1[0m" 404 -
+2025-03-17 10:58:26,431 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:58:26] "[36mGET /img/security_illustration.svg HTTP/1.1[0m" 304 -
+2025-03-17 10:58:26,445 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:58:26] "[36mGET /img/data_security.svg HTTP/1.1[0m" 304 -
+2025-03-17 10:58:29,201 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:58:29] "[33mGET /css/styles.css HTTP/1.1[0m" 404 -
+2025-03-17 10:58:48,327 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:58:48] "[33mGET /css/styles.css HTTP/1.1[0m" 404 -
+2025-03-17 10:58:48,367 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 10:58:48] "[33mGET /css/styles.css HTTP/1.1[0m" 404 -
+2025-03-17 11:00:59,639 - werkzeug - INFO -  * Restarting with stat
+2025-03-17 11:01:01,286 - werkzeug - WARNING -  * Debugger is active!
+2025-03-17 11:01:01,295 - werkzeug - INFO -  * Debugger PIN: 767-236-480
+2025-03-17 11:01:01,453 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-03-17 11:01:08,856 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:01:08] "GET / HTTP/1.1" 200 -
+2025-03-17 11:01:08,965 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:01:08] "[33mGET /css/styles.css HTTP/1.1[0m" 404 -
+2025-03-17 11:01:09,211 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:01:09] "[36mGET /img/security_illustration.svg HTTP/1.1[0m" 304 -
+2025-03-17 11:01:09,214 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:01:09] "[36mGET /img/data_security.svg HTTP/1.1[0m" 304 -
+2025-03-17 11:01:15,282 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:01:15] "[33mGET /css/styles.css HTTP/1.1[0m" 404 -
+2025-03-17 11:01:15,322 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:01:15] "[33mGET /css/styles.css HTTP/1.1[0m" 404 -
+2025-03-17 11:02:56,032 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:02:56] "[33mGET /css/styles.css HTTP/1.1[0m" 404 -
+2025-03-17 11:02:56,063 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:02:56] "[33mGET /css/styles.css HTTP/1.1[0m" 404 -
+2025-03-17 11:02:59,098 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:02:59] "GET / HTTP/1.1" 200 -
+2025-03-17 11:02:59,169 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:02:59] "[33mGET /css/styles.css HTTP/1.1[0m" 404 -
+2025-03-17 11:02:59,182 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:02:59] "[36mGET /img/security_illustration.svg HTTP/1.1[0m" 304 -
+2025-03-17 11:02:59,185 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:02:59] "[36mGET /img/data_security.svg HTTP/1.1[0m" 304 -
+2025-03-17 11:03:09,213 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:03:09] "[33mGET /css/styles.css HTTP/1.1[0m" 404 -
+2025-03-17 11:03:09,249 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:03:09] "[33mGET /css/styles.css HTTP/1.1[0m" 404 -
+2025-03-17 11:03:21,090 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:03:21] "[33mGET /static/css/styles.css HTTP/1.1[0m" 404 -
+2025-03-17 11:03:21,131 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:03:21] "[33mGET /css/styles.css HTTP/1.1[0m" 404 -
+2025-03-17 11:05:55,173 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:05:55] "[33mGET /static/css/styles.css HTTP/1.1[0m" 404 -
+2025-03-17 11:05:55,204 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:05:55] "GET /css/style.css HTTP/1.1" 200 -
+2025-03-17 11:05:55,696 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:05:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-17 11:05:58,126 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:05:58] "GET / HTTP/1.1" 200 -
+2025-03-17 11:05:58,169 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:05:58] "GET /css/style.css HTTP/1.1" 200 -
+2025-03-17 11:05:58,207 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:05:58] "GET /img/security_illustration.svg HTTP/1.1" 200 -
+2025-03-17 11:05:58,208 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:05:58] "GET /img/data_security.svg HTTP/1.1" 200 -
+2025-03-17 11:05:58,939 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:05:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-17 11:06:09,113 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:06:09] "GET /about HTTP/1.1" 200 -
+2025-03-17 11:06:09,159 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:06:09] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-03-17 11:06:09,180 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:06:09] "[36mGET /img/initialization.svg HTTP/1.1[0m" 304 -
+2025-03-17 11:06:09,181 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:06:09] "[36mGET /img/encryption.svg HTTP/1.1[0m" 304 -
+2025-03-17 11:06:09,640 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:06:09] "[36mGET /img/access_control.svg HTTP/1.1[0m" 304 -
+2025-03-17 11:06:11,845 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:06:11] "GET /auth/login HTTP/1.1" 200 -
+2025-03-17 11:06:11,888 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:06:11] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-03-17 11:06:24,745 - controllers.auth - INFO - User abhi logged in
+2025-03-17 11:06:24,749 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:06:24] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-03-17 11:06:24,801 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:06:24] "GET /dashboard HTTP/1.1" 200 -
+2025-03-17 11:06:24,859 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:06:24] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-03-17 11:12:11,379 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:12:11] "GET /dashboard HTTP/1.1" 200 -
+2025-03-17 11:12:11,414 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:12:11] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-03-17 11:12:14,964 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:12:14] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-03-17 11:14:05,095 - werkzeug - INFO -  * Detected change in 'D:\\projects\\cloudcrypt\\crypt_plus\\app.py', reloading
+2025-03-17 11:14:05,431 - werkzeug - INFO -  * Restarting with stat
+2025-03-17 11:14:08,647 - werkzeug - WARNING -  * Debugger is active!
+2025-03-17 11:14:08,654 - werkzeug - INFO -  * Debugger PIN: 767-236-480
+2025-03-17 11:14:08,799 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-03-17 11:14:26,043 - werkzeug - INFO -  * Detected change in 'D:\\projects\\cloudcrypt\\crypt_plus\\app.py', reloading
+2025-03-17 11:14:26,221 - werkzeug - INFO -  * Restarting with stat
+2025-03-17 11:19:42,157 - werkzeug - INFO -  * Restarting with stat
+2025-03-17 11:19:43,886 - werkzeug - WARNING -  * Debugger is active!
+2025-03-17 11:19:43,892 - werkzeug - INFO -  * Debugger PIN: 767-236-480
+2025-03-17 11:19:44,055 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-03-17 11:19:51,382 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:19:51] "GET /dashboard HTTP/1.1" 200 -
+2025-03-17 11:19:51,581 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:19:51] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-03-17 11:19:55,497 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:19:55] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-17 11:19:55,517 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:19:55] "GET /dashboard HTTP/1.1" 200 -
+2025-03-17 11:19:55,574 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:19:55] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-03-17 11:19:57,783 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:19:57] "GET /dashboard HTTP/1.1" 200 -
+2025-03-17 11:19:57,836 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:19:57] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-03-17 11:19:59,448 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:19:59] "GET /data/files HTTP/1.1" 200 -
+2025-03-17 11:19:59,491 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:19:59] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-03-17 11:20:01,281 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:20:01] "GET /policy/policies HTTP/1.1" 200 -
+2025-03-17 11:20:23,506 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:20:23] "GET /about HTTP/1.1" 200 -
+2025-03-17 11:20:23,581 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:20:23] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-03-17 11:20:23,641 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:20:23] "[36mGET /img/initialization.svg HTTP/1.1[0m" 304 -
+2025-03-17 11:20:23,646 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:20:23] "[36mGET /img/encryption.svg HTTP/1.1[0m" 304 -
+2025-03-17 11:20:23,871 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:20:23] "[36mGET /img/access_control.svg HTTP/1.1[0m" 304 -
+2025-03-17 11:20:58,365 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:20:58] "GET /policy/policies HTTP/1.1" 200 -
+2025-03-17 11:24:55,648 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:24:55] "GET /policy/policies HTTP/1.1" 200 -
+2025-03-17 11:24:55,693 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:24:55] "GET /css/style.css HTTP/1.1" 200 -
+2025-03-17 11:25:04,184 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:25:04] "GET /policy/policies HTTP/1.1" 200 -
+2025-03-17 11:25:04,224 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:25:04] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-03-17 11:25:05,411 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:25:05] "GET /about HTTP/1.1" 200 -
+2025-03-17 11:25:05,468 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:25:05] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-03-17 11:25:05,482 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:25:05] "[36mGET /img/initialization.svg HTTP/1.1[0m" 304 -
+2025-03-17 11:25:05,484 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:25:05] "[36mGET /img/encryption.svg HTTP/1.1[0m" 304 -
+2025-03-17 11:25:05,750 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:25:05] "[36mGET /img/access_control.svg HTTP/1.1[0m" 304 -
+2025-03-17 11:25:07,713 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:25:07] "GET /dashboard HTTP/1.1" 200 -
+2025-03-17 11:25:07,762 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:25:07] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-03-17 11:25:13,008 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:25:13] "GET /policy/policies/create HTTP/1.1" 200 -
+2025-03-17 11:25:13,057 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:25:13] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-03-17 11:58:40,930 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:58:40] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-17 11:58:40,943 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:58:40] "GET /dashboard HTTP/1.1" 200 -
+2025-03-17 11:58:40,973 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 11:58:40] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-03-17 12:00:49,693 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:00:49] "GET /data/files HTTP/1.1" 200 -
+2025-03-17 12:00:49,724 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:00:49] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-03-17 12:01:26,091 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:01:26] "GET /data/upload HTTP/1.1" 200 -
+2025-03-17 12:01:26,118 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:01:26] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-03-17 12:02:06,779 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:02:06] "GET /policy/policies HTTP/1.1" 200 -
+2025-03-17 12:02:06,802 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:02:06] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-03-17 12:02:40,440 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:02:40] "GET /policy/policies/create HTTP/1.1" 200 -
+2025-03-17 12:02:40,465 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:02:40] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-03-17 12:03:10,444 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:03:10] "GET /about HTTP/1.1" 200 -
+2025-03-17 12:03:10,465 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:03:10] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-03-17 12:03:10,471 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:03:10] "[36mGET /img/encryption.svg HTTP/1.1[0m" 304 -
+2025-03-17 12:03:10,471 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:03:10] "[36mGET /img/initialization.svg HTTP/1.1[0m" 304 -
+2025-03-17 12:03:10,583 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:03:10] "[36mGET /img/access_control.svg HTTP/1.1[0m" 304 -
+2025-03-17 12:05:05,108 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:05:05] "GET /dashboard HTTP/1.1" 200 -
+2025-03-17 12:05:05,135 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:05:05] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-03-17 12:05:11,078 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:05:11] "[35m[1mGET /auth/manage-attributes HTTP/1.1[0m" 500 -
+2025-03-17 12:05:11,094 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:05:11] "GET /auth/manage-attributes?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-17 12:05:11,096 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:05:11] "GET /auth/manage-attributes?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-17 12:05:11,182 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:05:11] "GET /auth/manage-attributes?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-17 12:05:11,216 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:05:11] "GET /auth/manage-attributes?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2025-03-17 12:05:11,283 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:05:11] "GET /auth/manage-attributes?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-17 12:05:13,506 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:05:13] "GET /policy/policies HTTP/1.1" 200 -
+2025-03-17 12:05:13,522 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:05:13] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-03-17 12:05:15,535 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:05:15] "GET /policy/policies HTTP/1.1" 200 -
+2025-03-17 12:05:15,551 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:05:15] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-03-17 12:05:19,346 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:05:19] "GET /data/files HTTP/1.1" 200 -
+2025-03-17 12:05:19,360 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:05:19] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-03-17 12:05:29,428 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:05:29] "[33mGET /login HTTP/1.1[0m" 404 -
+2025-03-17 12:05:29,453 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:05:29] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-03-17 12:05:32,272 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:05:32] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-17 12:05:32,280 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:05:32] "GET /dashboard HTTP/1.1" 200 -
+2025-03-17 12:05:32,294 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:05:32] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-03-17 12:06:21,354 - sqlalchemy.pool.impl.NullPool - ERROR - Exception during reset or similar
+Traceback (most recent call last):
+  File "D:\projects\cloudcrypt\crypt_plus\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 739, in _finalize_fairy
+    fairy._reset(pool)
+    ~~~~~~~~~~~~^^^^^^
+  File "D:\projects\cloudcrypt\crypt_plus\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 988, in _reset
+    pool._dialect.do_rollback(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "D:\projects\cloudcrypt\crypt_plus\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 682, in do_rollback
+    dbapi_connection.rollback()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 19844 and this is thread id 21076.
+2025-03-17 12:06:21,372 - sqlalchemy.pool.impl.NullPool - ERROR - Exception closing connection <sqlite3.Connection object at 0x0000014C4717DE40>
+Traceback (most recent call last):
+  File "D:\projects\cloudcrypt\crypt_plus\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 739, in _finalize_fairy
+    fairy._reset(pool)
+    ~~~~~~~~~~~~^^^^^^
+  File "D:\projects\cloudcrypt\crypt_plus\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 988, in _reset
+    pool._dialect.do_rollback(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "D:\projects\cloudcrypt\crypt_plus\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 682, in do_rollback
+    dbapi_connection.rollback()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 19844 and this is thread id 21076.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\projects\cloudcrypt\crypt_plus\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 247, in _close_connection
+    self._dialect.do_close(connection)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "D:\projects\cloudcrypt\crypt_plus\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 688, in do_close
+    dbapi_connection.close()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 19844 and this is thread id 21076.
+2025-03-17 12:06:27,681 - werkzeug - INFO -  * Restarting with stat
+2025-03-17 12:06:28,342 - werkzeug - WARNING -  * Debugger is active!
+2025-03-17 12:06:28,345 - werkzeug - INFO -  * Debugger PIN: 767-236-480
+2025-03-17 12:06:28,407 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-03-17 12:06:30,042 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:06:30] "GET / HTTP/1.1" 200 -
+2025-03-17 12:06:30,181 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:06:30] "GET /img/data_security.svg HTTP/1.1" 200 -
+2025-03-17 12:06:30,181 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:06:30] "GET /img/security_illustration.svg HTTP/1.1" 200 -
+2025-03-17 12:06:30,182 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:06:30] "GET /css/style.css HTTP/1.1" 200 -
+2025-03-17 12:06:30,445 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:06:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-17 12:07:26,738 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:07:26] "GET / HTTP/1.1" 200 -
+2025-03-17 12:07:26,783 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:07:26] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-03-17 12:07:26,784 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:07:26] "[36mGET /img/security_illustration.svg HTTP/1.1[0m" 304 -
+2025-03-17 12:07:26,785 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:07:26] "[36mGET /img/data_security.svg HTTP/1.1[0m" 304 -
+2025-03-17 12:07:27,238 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:07:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-17 12:09:25,253 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:09:25] "GET /auth/login HTTP/1.1" 200 -
+2025-03-17 12:09:25,283 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:09:25] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-03-17 12:10:32,561 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:10:32] "GET /auth/register HTTP/1.1" 200 -
+2025-03-17 12:10:32,592 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:10:32] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
