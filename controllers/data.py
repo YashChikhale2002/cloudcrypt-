@@ -1,4 +1,4 @@
-from flask import Blueprint, request, jsonify, send_file, render_template, flash, redirect, url_for
+from flask import Blueprint, request, jsonify, send_file, render_template, flash, redirect, url_for, current_app
 from flask_login import login_required, current_user
 from werkzeug.utils import secure_filename
 import os
@@ -35,21 +35,21 @@ def init_data_controller(db_session, config, encryption_service,
                 flash('No file selected', 'error')
                 return redirect(request.url)
             
-            # Check file size
-            if request.content_length > config.MAX_CONTENT_LENGTH:
-                flash(f'File too large (max {config.MAX_CONTENT_LENGTH/1024/1024}MB)', 'error')
+            # Check file size - FIXED: access config as dictionary instead of object
+            if request.content_length and request.content_length > config['MAX_CONTENT_LENGTH']:
+                flash(f'File too large (max {config["MAX_CONTENT_LENGTH"]/1024/1024}MB)', 'error')
                 return redirect(request.url)
             
             # Get encryption preference
             encrypt = request.form.get('encrypt', 'yes') == 'yes'
             
             # Create upload directory if it doesn't exist
-            os.makedirs(config.UPLOAD_FOLDER, exist_ok=True)
+            os.makedirs(config['UPLOAD_FOLDER'], exist_ok=True)
             
             # Save file with a secure filename
             filename = secure_filename(file.filename)
             unique_filename = f"{uuid.uuid4()}_{filename}"
-            file_path = os.path.join(config.UPLOAD_FOLDER, unique_filename)
+            file_path = os.path.join(config['UPLOAD_FOLDER'], unique_filename)
             file.save(file_path)
             
             # Set secure permissions

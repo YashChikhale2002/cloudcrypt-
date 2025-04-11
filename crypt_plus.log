@@ -320,3 +320,182 @@ sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in
 2025-03-17 12:09:25,283 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:09:25] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
 2025-03-17 12:10:32,561 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:10:32] "GET /auth/register HTTP/1.1" 200 -
 2025-03-17 12:10:32,592 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:10:32] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:30:33,304 - werkzeug - INFO -  * Restarting with stat
+2025-04-11 19:30:34,776 - werkzeug - WARNING -  * Debugger is active!
+2025-04-11 19:30:34,786 - werkzeug - INFO -  * Debugger PIN: 158-521-788
+2025-04-11 19:30:34,957 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-04-11 19:30:39,688 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:30:39] "GET / HTTP/1.1" 200 -
+2025-04-11 19:30:39,939 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:30:39] "GET /css/style.css HTTP/1.1" 200 -
+2025-04-11 19:30:40,042 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:30:40] "GET /img/security_illustration.svg HTTP/1.1" 200 -
+2025-04-11 19:30:40,045 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:30:40] "GET /img/data_security.svg HTTP/1.1" 200 -
+2025-04-11 19:30:40,543 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:30:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-11 19:30:45,707 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:30:45] "GET /auth/register HTTP/1.1" 200 -
+2025-04-11 19:30:45,755 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:30:45] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:32:49,747 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:32:49] "[33mGET /admin/training/add HTTP/1.1[0m" 404 -
+2025-04-11 19:32:49,805 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:32:49] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:32:53,824 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:32:53] "[33mGET /admin/ HTTP/1.1[0m" 404 -
+2025-04-11 19:32:53,869 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:32:53] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:32:57,188 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:32:57] "[33mGET /admin/ HTTP/1.1[0m" 404 -
+2025-04-11 19:32:57,225 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:32:57] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:33:16,140 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:33:16] "[33mGET /admin/login HTTP/1.1[0m" 404 -
+2025-04-11 19:33:16,186 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:33:16] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:33:18,795 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:33:18] "GET /auth/login HTTP/1.1" 200 -
+2025-04-11 19:33:18,836 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:33:18] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:33:20,595 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:33:20] "GET /auth/register HTTP/1.1" 200 -
+2025-04-11 19:33:20,637 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:33:20] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:35:37,209 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:35:37] "POST /auth/login HTTP/1.1" 200 -
+2025-04-11 19:35:37,254 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:35:37] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:36:13,271 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:36:13] "POST /auth/login HTTP/1.1" 200 -
+2025-04-11 19:36:13,309 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:36:13] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:36:43,032 - werkzeug - INFO -  * Detected change in 'D:\\projects\\crypt_plus\\venv\\Lib\\site-packages\\flask\\json\\__init__.py', reloading
+2025-04-11 19:36:43,244 - werkzeug - INFO -  * Restarting with stat
+2025-04-11 19:36:44,931 - werkzeug - WARNING -  * Debugger is active!
+2025-04-11 19:36:44,939 - werkzeug - INFO -  * Debugger PIN: 158-521-788
+2025-04-11 19:36:45,160 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-04-11 19:36:55,421 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:36:55] "GET /auth/login HTTP/1.1" 200 -
+2025-04-11 19:36:55,576 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:36:55] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:37:45,571 - werkzeug - INFO -  * Detected change in 'D:\\projects\\crypt_plus\\venv\\Lib\\site-packages\\flask\\json\\__init__.py', reloading
+2025-04-11 19:37:45,738 - werkzeug - INFO -  * Restarting with stat
+2025-04-11 19:37:47,312 - werkzeug - WARNING -  * Debugger is active!
+2025-04-11 19:37:47,319 - werkzeug - INFO -  * Debugger PIN: 158-521-788
+2025-04-11 19:37:47,495 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-04-11 19:37:49,886 - werkzeug - INFO -  * Detected change in 'D:\\projects\\crypt_plus\\venv\\Lib\\site-packages\\flask\\json\\__init__.py', reloading
+2025-04-11 19:37:50,033 - werkzeug - INFO -  * Restarting with stat
+2025-04-11 19:37:51,567 - werkzeug - WARNING -  * Debugger is active!
+2025-04-11 19:37:51,567 - werkzeug - INFO -  * Debugger PIN: 158-521-788
+2025-04-11 19:37:51,728 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-04-11 19:38:36,467 - werkzeug - INFO -  * Detected change in 'D:\\projects\\crypt_plus\\venv\\Lib\\site-packages\\flask\\json\\__init__.py', reloading
+2025-04-11 19:38:36,645 - werkzeug - INFO -  * Restarting with stat
+2025-04-11 19:38:38,081 - werkzeug - WARNING -  * Debugger is active!
+2025-04-11 19:38:38,090 - werkzeug - INFO -  * Debugger PIN: 158-521-788
+2025-04-11 19:38:38,227 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-04-11 19:38:39,463 - werkzeug - INFO -  * Detected change in 'D:\\projects\\crypt_plus\\venv\\Lib\\site-packages\\flask\\json\\__init__.py', reloading
+2025-04-11 19:38:39,620 - werkzeug - INFO -  * Restarting with stat
+2025-04-11 19:38:41,018 - werkzeug - WARNING -  * Debugger is active!
+2025-04-11 19:38:41,025 - werkzeug - INFO -  * Debugger PIN: 158-521-788
+2025-04-11 19:38:41,194 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-04-11 19:38:41,310 - werkzeug - INFO -  * Detected change in 'D:\\projects\\crypt_plus\\venv\\Lib\\site-packages\\flask\\json\\__init__.py', reloading
+2025-04-11 19:38:41,441 - werkzeug - INFO -  * Restarting with stat
+2025-04-11 19:38:42,977 - werkzeug - WARNING -  * Debugger is active!
+2025-04-11 19:38:42,985 - werkzeug - INFO -  * Debugger PIN: 158-521-788
+2025-04-11 19:38:43,131 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-04-11 19:38:55,513 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:38:55] "GET /auth/register HTTP/1.1" 200 -
+2025-04-11 19:38:55,700 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:38:55] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:39:30,890 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:39:30] "[32mPOST /auth/register HTTP/1.1[0m" 302 -
+2025-04-11 19:39:30,909 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:39:30] "GET /auth/login HTTP/1.1" 200 -
+2025-04-11 19:39:30,962 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:39:30] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:39:50,015 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:39:50] "POST /auth/login HTTP/1.1" 200 -
+2025-04-11 19:39:50,116 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:39:50] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:39:56,734 - controllers.auth - INFO - User yash logged in
+2025-04-11 19:39:56,736 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:39:56] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-04-11 19:39:56,784 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:39:56] "GET /dashboard HTTP/1.1" 200 -
+2025-04-11 19:39:56,820 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:39:56] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:39:58,753 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:39:58] "GET /data/upload HTTP/1.1" 200 -
+2025-04-11 19:39:58,801 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:39:58] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:41:22,851 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:41:22] "[35m[1mPOST /data/upload HTTP/1.1[0m" 500 -
+2025-04-11 19:41:22,897 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:41:22] "GET /data/upload?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-11 19:41:22,899 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:41:22] "GET /data/upload?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-11 19:41:22,966 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:41:22] "GET /data/upload?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2025-04-11 19:41:22,976 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:41:22] "GET /data/upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-11 19:41:23,000 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:41:23] "GET /data/upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-11 19:47:03,210 - werkzeug - INFO -  * Detected change in 'D:\\projects\\crypt_plus\\config.py', reloading
+2025-04-11 19:47:03,291 - sqlalchemy.pool.impl.NullPool - ERROR - Exception during reset or similar
+Traceback (most recent call last):
+  File "D:\projects\crypt_plus\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 739, in _finalize_fairy
+    fairy._reset(pool)
+  File "D:\projects\crypt_plus\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 988, in _reset
+    pool._dialect.do_rollback(self)
+  File "D:\projects\crypt_plus\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 682, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 15476 and this is thread id 19424.
+2025-04-11 19:47:03,298 - sqlalchemy.pool.impl.NullPool - ERROR - Exception closing connection <sqlite3.Connection object at 0x000002381DCB3E20>
+Traceback (most recent call last):
+  File "D:\projects\crypt_plus\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 739, in _finalize_fairy
+    fairy._reset(pool)
+  File "D:\projects\crypt_plus\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 988, in _reset
+    pool._dialect.do_rollback(self)
+  File "D:\projects\crypt_plus\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 682, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 15476 and this is thread id 19424.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\projects\crypt_plus\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 247, in _close_connection
+    self._dialect.do_close(connection)
+  File "D:\projects\crypt_plus\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 688, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 15476 and this is thread id 19424.
+2025-04-11 19:47:03,487 - werkzeug - INFO -  * Restarting with stat
+2025-04-11 19:47:05,796 - werkzeug - WARNING -  * Debugger is active!
+2025-04-11 19:47:05,801 - werkzeug - INFO -  * Debugger PIN: 158-521-788
+2025-04-11 19:47:05,957 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-04-11 19:49:25,380 - werkzeug - INFO -  * Detected change in 'D:\\projects\\crypt_plus\\controllers\\data.py', reloading
+2025-04-11 19:49:25,579 - werkzeug - INFO -  * Restarting with stat
+2025-04-11 19:49:27,167 - werkzeug - WARNING -  * Debugger is active!
+2025-04-11 19:49:27,174 - werkzeug - INFO -  * Debugger PIN: 158-521-788
+2025-04-11 19:49:27,348 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-04-11 19:49:37,776 - werkzeug - INFO -  * Detected change in 'D:\\projects\\crypt_plus\\models\\data.py', reloading
+2025-04-11 19:49:37,969 - werkzeug - INFO -  * Restarting with stat
+2025-04-11 19:49:39,545 - werkzeug - WARNING -  * Debugger is active!
+2025-04-11 19:49:39,549 - werkzeug - INFO -  * Debugger PIN: 158-521-788
+2025-04-11 19:49:39,702 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-04-11 19:49:49,425 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:49:49] "GET /data/upload HTTP/1.1" 200 -
+2025-04-11 19:50:09,974 - werkzeug - INFO -  * Restarting with stat
+2025-04-11 19:50:11,433 - werkzeug - WARNING -  * Debugger is active!
+2025-04-11 19:50:11,442 - werkzeug - INFO -  * Debugger PIN: 158-521-788
+2025-04-11 19:50:11,604 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-04-11 19:50:46,007 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:50:46] "GET /data/upload HTTP/1.1" 200 -
+2025-04-11 19:50:46,195 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:50:46] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:50:53,393 - controllers.data - INFO - File encrypted: Readme.txt
+2025-04-11 19:50:53,405 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:50:53] "[32mPOST /data/upload HTTP/1.1[0m" 302 -
+2025-04-11 19:50:53,454 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:50:53] "GET /data/files HTTP/1.1" 200 -
+2025-04-11 19:50:53,492 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:50:53] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:50:58,530 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:50:58] "[35m[1mGET /data/files/1/share HTTP/1.1[0m" 500 -
+2025-04-11 19:50:58,554 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:50:58] "GET /data/files/1/share?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-11 19:50:58,565 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:50:58] "GET /data/files/1/share?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-11 19:50:58,591 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:50:58] "GET /data/files/1/share?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2025-04-11 19:50:58,597 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:50:58] "GET /data/files/1/share?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-11 19:50:58,627 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:50:58] "GET /data/files/1/share?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-11 19:51:00,330 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:51:00] "GET /data/files HTTP/1.1" 200 -
+2025-04-11 19:51:01,730 - services.policy_enforcement - INFO - Access granted: User yash for read on Readme.txt
+2025-04-11 19:51:01,739 - services.policy_enforcement - INFO - Access granted: User yash for read on Readme.txt
+2025-04-11 19:51:01,739 - services.policy_enforcement - WARNING - Private key retrieval is a stub - not implemented securely
+2025-04-11 19:51:01,739 - services.policy_enforcement - WARNING - Key access for non-owner not implemented
+2025-04-11 19:51:01,745 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:51:01] "[32mGET /data/files/1/download HTTP/1.1[0m" 302 -
+2025-04-11 19:51:01,765 - services.policy_enforcement - INFO - Access granted: User yash for read on Readme.txt
+2025-04-11 19:51:01,801 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:51:01] "GET /data/files/1 HTTP/1.1" 200 -
+2025-04-11 19:51:01,835 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:51:01] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:51:06,118 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:51:06] "GET /data/files HTTP/1.1" 200 -
+2025-04-11 19:51:21,172 - werkzeug - INFO -  * Detected change in 'D:\\projects\\crypt_plus\\models\\data.py', reloading
+2025-04-11 19:51:21,212 - sqlalchemy.pool.impl.NullPool - ERROR - Exception during reset or similar
+Traceback (most recent call last):
+  File "D:\projects\crypt_plus\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 739, in _finalize_fairy
+    fairy._reset(pool)
+  File "D:\projects\crypt_plus\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 988, in _reset
+    pool._dialect.do_rollback(self)
+  File "D:\projects\crypt_plus\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 682, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 22600 and this is thread id 12260.
+2025-04-11 19:51:21,212 - sqlalchemy.pool.impl.NullPool - ERROR - Exception closing connection <sqlite3.Connection object at 0x000002255D601030>
+Traceback (most recent call last):
+  File "D:\projects\crypt_plus\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 739, in _finalize_fairy
+    fairy._reset(pool)
+  File "D:\projects\crypt_plus\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 988, in _reset
+    pool._dialect.do_rollback(self)
+  File "D:\projects\crypt_plus\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 682, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 22600 and this is thread id 12260.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\projects\crypt_plus\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 247, in _close_connection
+    self._dialect.do_close(connection)
+  File "D:\projects\crypt_plus\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 688, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 22600 and this is thread id 12260.
+2025-04-11 19:51:21,352 - werkzeug - INFO -  * Restarting with stat
+2025-04-11 19:51:22,920 - werkzeug - WARNING -  * Debugger is active!
+2025-04-11 19:51:22,927 - werkzeug - INFO -  * Debugger PIN: 158-521-788
+2025-04-11 19:51:23,093 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
