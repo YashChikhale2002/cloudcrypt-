@@ -320,3 +320,400 @@ sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in
 2025-03-17 12:09:25,283 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:09:25] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
 2025-03-17 12:10:32,561 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:10:32] "GET /auth/register HTTP/1.1" 200 -
 2025-03-17 12:10:32,592 - werkzeug - INFO - 127.0.0.1 - - [17/Mar/2025 12:10:32] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:07:44,405 - werkzeug - INFO -  * Restarting with stat
+2025-04-11 19:07:45,179 - werkzeug - WARNING -  * Debugger is active!
+2025-04-11 19:07:45,182 - werkzeug - INFO -  * Debugger PIN: 134-034-929
+2025-04-11 19:07:45,278 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-04-11 19:07:49,986 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:07:49] "GET / HTTP/1.1" 200 -
+2025-04-11 19:07:50,072 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:07:50] "GET /img/security_illustration.svg HTTP/1.1" 200 -
+2025-04-11 19:07:50,073 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:07:50] "GET /img/data_security.svg HTTP/1.1" 200 -
+2025-04-11 19:07:50,074 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:07:50] "GET /css/style.css HTTP/1.1" 200 -
+2025-04-11 19:07:50,486 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:07:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-11 19:12:43,031 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:12:43] "GET /auth/register HTTP/1.1" 200 -
+2025-04-11 19:12:43,093 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:12:43] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:12:46,040 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:12:46] "GET /about HTTP/1.1" 200 -
+2025-04-11 19:12:46,063 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:12:46] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:12:46,070 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:12:46] "GET /img/initialization.svg HTTP/1.1" 200 -
+2025-04-11 19:12:46,072 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:12:46] "GET /img/encryption.svg HTTP/1.1" 200 -
+2025-04-11 19:12:46,074 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:12:46] "GET /img/access_control.svg HTTP/1.1" 200 -
+2025-04-11 19:13:07,817 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:13:07] "GET /auth/register HTTP/1.1" 200 -
+2025-04-11 19:13:07,842 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:13:07] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:14:06,022 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:14:06] "POST /auth/register HTTP/1.1" 200 -
+2025-04-11 19:14:06,050 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:14:06] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:14:34,319 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:14:34] "[32mPOST /auth/register HTTP/1.1[0m" 302 -
+2025-04-11 19:14:34,325 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:14:34] "GET /auth/login HTTP/1.1" 200 -
+2025-04-11 19:14:34,342 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:14:34] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:14:52,899 - controllers.auth - INFO - User abhishek logged in
+2025-04-11 19:14:52,900 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:14:52] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-04-11 19:14:52,921 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:14:52] "GET /dashboard HTTP/1.1" 200 -
+2025-04-11 19:14:52,944 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:14:52] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:15:30,052 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:15:30] "GET /data/upload HTTP/1.1" 200 -
+2025-04-11 19:15:30,127 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:15:30] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:15:40,101 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:15:40] "[35m[1mPOST /data/upload HTTP/1.1[0m" 500 -
+2025-04-11 19:15:40,128 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:15:40] "GET /data/upload?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-11 19:15:40,128 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:15:40] "GET /data/upload?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-11 19:15:40,172 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:15:40] "GET /data/upload?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2025-04-11 19:15:40,174 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:15:40] "GET /data/upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-11 19:15:40,248 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:15:40] "GET /data/upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-11 19:15:59,625 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:15:59] "[35m[1mPOST /data/upload HTTP/1.1[0m" 500 -
+2025-04-11 19:15:59,664 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:15:59] "GET /data/upload?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-11 19:15:59,668 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:15:59] "GET /data/upload?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-11 19:15:59,706 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:15:59] "GET /data/upload?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2025-04-11 19:15:59,712 - sqlalchemy.pool.impl.NullPool - ERROR - Exception during reset or similar
+Traceback (most recent call last):
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 739, in _finalize_fairy
+    fairy._reset(pool)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 988, in _reset
+    pool._dialect.do_rollback(self)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 682, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 27248 and this is thread id 15220.
+2025-04-11 19:15:59,716 - sqlalchemy.pool.impl.NullPool - ERROR - Exception closing connection <sqlite3.Connection object at 0x000001E66235EC50>
+Traceback (most recent call last):
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 739, in _finalize_fairy
+    fairy._reset(pool)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 988, in _reset
+    pool._dialect.do_rollback(self)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 682, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 27248 and this is thread id 15220.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 247, in _close_connection
+    self._dialect.do_close(connection)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 688, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 27248 and this is thread id 15220.
+2025-04-11 19:15:59,717 - sqlalchemy.pool.impl.NullPool - ERROR - Exception during reset or similar
+Traceback (most recent call last):
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 739, in _finalize_fairy
+    fairy._reset(pool)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 988, in _reset
+    pool._dialect.do_rollback(self)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 682, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 31832 and this is thread id 15220.
+2025-04-11 19:15:59,718 - sqlalchemy.pool.impl.NullPool - ERROR - Exception closing connection <sqlite3.Connection object at 0x000001E66247CF40>
+Traceback (most recent call last):
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 739, in _finalize_fairy
+    fairy._reset(pool)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 988, in _reset
+    pool._dialect.do_rollback(self)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 682, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 31832 and this is thread id 15220.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 247, in _close_connection
+    self._dialect.do_close(connection)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 688, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 31832 and this is thread id 15220.
+2025-04-11 19:15:59,711 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:15:59] "GET /data/upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-11 19:15:59,785 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:15:59] "GET /data/upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-11 19:16:12,751 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:16:12] "GET /data/upload HTTP/1.1" 200 -
+2025-04-11 19:16:12,776 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:16:12] "GET /css/style.css HTTP/1.1" 200 -
+2025-04-11 19:16:13,072 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:16:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-11 19:16:13,458 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:16:13] "GET /data/upload HTTP/1.1" 200 -
+2025-04-11 19:16:13,492 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:16:13] "GET /css/style.css HTTP/1.1" 200 -
+2025-04-11 19:16:13,732 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:16:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-11 19:16:19,018 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:16:19] "[35m[1mPOST /data/upload HTTP/1.1[0m" 500 -
+2025-04-11 19:16:19,052 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:16:19] "GET /data/upload?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-11 19:16:19,060 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:16:19] "GET /data/upload?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-11 19:16:19,078 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:16:19] "GET /data/upload?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2025-04-11 19:16:19,081 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:16:19] "GET /data/upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-11 19:16:19,152 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:16:19] "GET /data/upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-11 19:18:03,055 - sqlalchemy.pool.impl.NullPool - ERROR - Exception during reset or similar
+Traceback (most recent call last):
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 739, in _finalize_fairy
+    fairy._reset(pool)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 988, in _reset
+    pool._dialect.do_rollback(self)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 682, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 29396 and this is thread id 14868.
+2025-04-11 19:18:03,056 - sqlalchemy.pool.impl.NullPool - ERROR - Exception closing connection <sqlite3.Connection object at 0x000001E66247DE40>
+Traceback (most recent call last):
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 739, in _finalize_fairy
+    fairy._reset(pool)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 988, in _reset
+    pool._dialect.do_rollback(self)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 682, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 29396 and this is thread id 14868.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 247, in _close_connection
+    self._dialect.do_close(connection)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 688, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 29396 and this is thread id 14868.
+2025-04-11 19:18:03,068 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:18:03] "[35m[1mPOST /data/upload HTTP/1.1[0m" 500 -
+2025-04-11 19:18:03,096 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:18:03] "GET /data/upload?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-11 19:18:03,101 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:18:03] "GET /data/upload?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-11 19:18:03,115 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:18:03] "GET /data/upload?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2025-04-11 19:18:03,118 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:18:03] "GET /data/upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-11 19:18:03,211 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:18:03] "GET /data/upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-11 19:18:07,606 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:18:07] "GET /data/files HTTP/1.1" 200 -
+2025-04-11 19:18:07,625 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:18:07] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:19:55,336 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:19:55] "GET /about HTTP/1.1" 200 -
+2025-04-11 19:19:55,404 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:19:55] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:19:55,415 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:19:55] "[36mGET /img/initialization.svg HTTP/1.1[0m" 304 -
+2025-04-11 19:19:55,417 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:19:55] "[36mGET /img/encryption.svg HTTP/1.1[0m" 304 -
+2025-04-11 19:19:55,421 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:19:55] "[36mGET /img/access_control.svg HTTP/1.1[0m" 304 -
+2025-04-11 19:19:56,183 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:19:56] "GET /policy/policies HTTP/1.1" 200 -
+2025-04-11 19:19:56,223 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:19:56] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:19:57,701 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:19:57] "GET /policy/policies/create HTTP/1.1" 200 -
+2025-04-11 19:19:57,715 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:19:57] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:20:20,555 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:20:20] "[35m[1mGET /policy/attributes HTTP/1.1[0m" 500 -
+2025-04-11 19:20:20,571 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:20:20] "GET /policy/attributes?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-11 19:20:20,571 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:20:20] "GET /policy/attributes?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-11 19:20:20,587 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:20:20] "GET /policy/attributes?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2025-04-11 19:20:20,589 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:20:20] "GET /policy/attributes?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-11 19:20:20,657 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:20:20] "GET /policy/attributes?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-11 19:20:28,927 - sqlalchemy.pool.impl.NullPool - ERROR - Exception during reset or similar
+Traceback (most recent call last):
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 739, in _finalize_fairy
+    fairy._reset(pool)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 988, in _reset
+    pool._dialect.do_rollback(self)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 682, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 13332 and this is thread id 1840.
+2025-04-11 19:20:28,929 - sqlalchemy.pool.impl.NullPool - ERROR - Exception closing connection <sqlite3.Connection object at 0x000001E66247EB60>
+Traceback (most recent call last):
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 739, in _finalize_fairy
+    fairy._reset(pool)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 988, in _reset
+    pool._dialect.do_rollback(self)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 682, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 13332 and this is thread id 1840.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 247, in _close_connection
+    self._dialect.do_close(connection)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 688, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 13332 and this is thread id 1840.
+2025-04-11 19:20:28,942 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:20:28] "[32mPOST /policy/ad/create HTTP/1.1[0m" 302 -
+2025-04-11 19:20:28,948 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:20:28] "GET /policy/ad HTTP/1.1" 200 -
+2025-04-11 19:20:28,967 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:20:28] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:20:34,661 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:20:34] "GET /data/files HTTP/1.1" 200 -
+2025-04-11 19:20:34,710 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:20:34] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:20:36,314 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:20:36] "GET /data/upload HTTP/1.1" 200 -
+2025-04-11 19:20:36,338 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:20:36] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:20:57,455 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:20:57] "[35m[1mPOST /data/upload HTTP/1.1[0m" 500 -
+2025-04-11 19:20:57,471 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:20:57] "GET /data/upload?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-11 19:20:57,478 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:20:57] "GET /data/upload?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-11 19:20:57,500 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:20:57] "GET /data/upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-11 19:20:57,503 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:20:57] "GET /data/upload?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2025-04-11 19:20:57,574 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:20:57] "GET /data/upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-11 19:21:23,485 - sqlalchemy.pool.impl.NullPool - ERROR - Exception during reset or similar
+Traceback (most recent call last):
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 739, in _finalize_fairy
+    fairy._reset(pool)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 988, in _reset
+    pool._dialect.do_rollback(self)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 682, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 31588 and this is thread id 17876.
+2025-04-11 19:21:23,487 - sqlalchemy.pool.impl.NullPool - ERROR - Exception closing connection <sqlite3.Connection object at 0x000001E66247F5B0>
+Traceback (most recent call last):
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 739, in _finalize_fairy
+    fairy._reset(pool)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 988, in _reset
+    pool._dialect.do_rollback(self)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 682, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 31588 and this is thread id 17876.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 247, in _close_connection
+    self._dialect.do_close(connection)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 688, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 31588 and this is thread id 17876.
+2025-04-11 19:21:23,498 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:21:23] "[35m[1mPOST /data/upload HTTP/1.1[0m" 500 -
+2025-04-11 19:21:23,519 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:21:23] "GET /data/upload?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-11 19:21:23,527 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:21:23] "GET /data/upload?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-11 19:21:23,570 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:21:23] "GET /data/upload?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2025-04-11 19:21:23,575 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:21:23] "GET /data/upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-11 19:21:23,682 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:21:23] "GET /data/upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-11 19:21:31,014 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:21:31] "[35m[1mPOST /data/upload HTTP/1.1[0m" 500 -
+2025-04-11 19:21:31,034 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:21:31] "GET /data/upload?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-11 19:21:31,039 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:21:31] "GET /data/upload?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-11 19:21:31,056 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:21:31] "GET /data/upload?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2025-04-11 19:21:31,058 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:21:31] "GET /data/upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-11 19:21:31,125 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:21:31] "GET /data/upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-11 19:21:33,127 - sqlalchemy.pool.impl.NullPool - ERROR - Exception during reset or similar
+Traceback (most recent call last):
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 739, in _finalize_fairy
+    fairy._reset(pool)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 988, in _reset
+    pool._dialect.do_rollback(self)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 682, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 29876 and this is thread id 11080.
+2025-04-11 19:21:33,128 - sqlalchemy.pool.impl.NullPool - ERROR - Exception closing connection <sqlite3.Connection object at 0x000001E662C48040>
+Traceback (most recent call last):
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 739, in _finalize_fairy
+    fairy._reset(pool)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 988, in _reset
+    pool._dialect.do_rollback(self)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 682, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 29876 and this is thread id 11080.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 247, in _close_connection
+    self._dialect.do_close(connection)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 688, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 29876 and this is thread id 11080.
+2025-04-11 19:21:33,131 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:21:33] "GET /data/upload HTTP/1.1" 200 -
+2025-04-11 19:21:33,145 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:21:33] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:21:35,160 - sqlalchemy.pool.impl.NullPool - ERROR - Exception during reset or similar
+Traceback (most recent call last):
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 739, in _finalize_fairy
+    fairy._reset(pool)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 988, in _reset
+    pool._dialect.do_rollback(self)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 682, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 14868 and this is thread id 16920.
+2025-04-11 19:21:35,161 - sqlalchemy.pool.impl.NullPool - ERROR - Exception closing connection <sqlite3.Connection object at 0x000001E66247E2F0>
+Traceback (most recent call last):
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 739, in _finalize_fairy
+    fairy._reset(pool)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 988, in _reset
+    pool._dialect.do_rollback(self)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 682, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 14868 and this is thread id 16920.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 247, in _close_connection
+    self._dialect.do_close(connection)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 688, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 14868 and this is thread id 16920.
+2025-04-11 19:21:35,162 - sqlalchemy.pool.impl.NullPool - ERROR - Exception during reset or similar
+Traceback (most recent call last):
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 739, in _finalize_fairy
+    fairy._reset(pool)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 988, in _reset
+    pool._dialect.do_rollback(self)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 682, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 17876 and this is thread id 16920.
+2025-04-11 19:21:35,163 - sqlalchemy.pool.impl.NullPool - ERROR - Exception closing connection <sqlite3.Connection object at 0x000001E662C48130>
+Traceback (most recent call last):
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 739, in _finalize_fairy
+    fairy._reset(pool)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 988, in _reset
+    pool._dialect.do_rollback(self)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 682, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 17876 and this is thread id 16920.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 247, in _close_connection
+    self._dialect.do_close(connection)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 688, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 17876 and this is thread id 16920.
+2025-04-11 19:37:35,075 - werkzeug - INFO -  * Restarting with stat
+2025-04-11 19:37:35,732 - werkzeug - WARNING -  * Debugger is active!
+2025-04-11 19:37:35,735 - werkzeug - INFO -  * Debugger PIN: 134-034-929
+2025-04-11 19:37:35,812 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-04-11 19:37:45,198 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:37:45] "GET / HTTP/1.1" 200 -
+2025-04-11 19:37:45,303 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:37:45] "GET /img/security_illustration.svg HTTP/1.1" 200 -
+2025-04-11 19:37:45,304 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:37:45] "GET /css/style.css HTTP/1.1" 200 -
+2025-04-11 19:37:45,305 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:37:45] "GET /img/data_security.svg HTTP/1.1" 200 -
+2025-04-11 19:37:45,616 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:37:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-11 19:37:47,412 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:37:47] "GET /auth/login HTTP/1.1" 200 -
+2025-04-11 19:37:47,476 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:37:47] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:37:52,711 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:37:52] "POST /auth/login HTTP/1.1" 200 -
+2025-04-11 19:37:52,752 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:37:52] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:48:23,931 - werkzeug - INFO -  * Detected change in 'D:\\accounts\\cloudcrypt-\\abhi.py', reloading
+2025-04-11 19:48:24,017 - werkzeug - INFO -  * Restarting with stat
+2025-04-11 19:48:24,701 - werkzeug - WARNING -  * Debugger is active!
+2025-04-11 19:48:24,706 - werkzeug - INFO -  * Debugger PIN: 134-034-929
+2025-04-11 19:48:24,818 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-04-11 19:48:35,737 - werkzeug - INFO -  * Detected change in 'D:\\accounts\\cloudcrypt-\\abhi.py', reloading
+2025-04-11 19:48:35,879 - werkzeug - INFO -  * Restarting with stat
+2025-04-11 19:48:36,744 - werkzeug - WARNING -  * Debugger is active!
+2025-04-11 19:48:36,748 - werkzeug - INFO -  * Debugger PIN: 134-034-929
+2025-04-11 19:48:36,835 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-04-11 19:57:54,824 - werkzeug - INFO -  * Restarting with stat
+2025-04-11 19:57:55,415 - werkzeug - WARNING -  * Debugger is active!
+2025-04-11 19:57:55,420 - werkzeug - INFO -  * Debugger PIN: 134-034-929
+2025-04-11 19:57:55,485 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-04-11 19:57:58,643 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:57:58] "GET / HTTP/1.1" 200 -
+2025-04-11 19:57:58,729 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:57:58] "[36mGET /img/data_security.svg HTTP/1.1[0m" 304 -
+2025-04-11 19:57:58,730 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:57:58] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:57:58,730 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:57:58] "[36mGET /img/security_illustration.svg HTTP/1.1[0m" 304 -
+2025-04-11 19:58:02,698 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:58:02] "GET /auth/login HTTP/1.1" 200 -
+2025-04-11 19:58:02,741 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:58:02] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:58:07,386 - controllers.auth - INFO - User admin logged in
+2025-04-11 19:58:07,388 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:58:07] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-04-11 19:58:07,411 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:58:07] "GET /dashboard HTTP/1.1" 200 -
+2025-04-11 19:58:07,442 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:58:07] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:58:12,614 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:58:12] "GET /data/upload HTTP/1.1" 200 -
+2025-04-11 19:58:12,642 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:58:12] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-11 19:58:19,242 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:58:19] "[35m[1mPOST /data/upload HTTP/1.1[0m" 500 -
+2025-04-11 19:58:19,293 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:58:19] "GET /data/upload?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-11 19:58:19,297 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:58:19] "GET /data/upload?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-11 19:58:19,378 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:58:19] "GET /data/upload?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2025-04-11 19:58:19,384 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:58:19] "GET /data/upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-11 19:58:19,615 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:58:19] "GET /data/upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-11 19:58:22,386 - sqlalchemy.pool.impl.NullPool - ERROR - Exception during reset or similar
+Traceback (most recent call last):
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 739, in _finalize_fairy
+    fairy._reset(pool)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 988, in _reset
+    pool._dialect.do_rollback(self)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 682, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8712 and this is thread id 17776.
+2025-04-11 19:58:22,392 - sqlalchemy.pool.impl.NullPool - ERROR - Exception closing connection <sqlite3.Connection object at 0x0000010274054C70>
+Traceback (most recent call last):
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 739, in _finalize_fairy
+    fairy._reset(pool)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 988, in _reset
+    pool._dialect.do_rollback(self)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 682, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8712 and this is thread id 17776.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 247, in _close_connection
+    self._dialect.do_close(connection)
+  File "D:\accounts\cloudcrypt-\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 688, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8712 and this is thread id 17776.
+2025-04-11 19:58:22,425 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:58:22] "[35m[1mPOST /data/upload HTTP/1.1[0m" 500 -
+2025-04-11 19:58:22,465 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:58:22] "GET /data/upload?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-11 19:58:22,487 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:58:22] "GET /data/upload?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-11 19:58:22,511 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:58:22] "GET /data/upload?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2025-04-11 19:58:22,515 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:58:22] "GET /data/upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-11 19:58:22,727 - werkzeug - INFO - 127.0.0.1 - - [11/Apr/2025 19:58:22] "GET /data/upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -

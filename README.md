@@ -144,3 +144,13 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - This project implements concepts from attribute-based encryption research
 - Security architecture inspired by NIST recommendations for access control
 - UI design leverages Bootstrap framework for responsive design
+
+
+
+admin user-admin
+
+
+password-SecurePassword123
+
+
+
