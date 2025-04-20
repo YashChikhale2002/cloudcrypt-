@@ -3774,3 +3774,219 @@ sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in
 2025-04-20 14:47:08,019 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 14:47:08] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
 2025-04-20 14:47:15,693 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 14:47:15] "GET /policy/policies/1/audit HTTP/1.1" 200 -
 2025-04-20 14:47:15,749 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 14:47:15] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 14:49:54,987 - werkzeug - INFO -  * Detected change in 'D:\\projects\\crypt_plus\\services\\policy_enforcement.py', reloading
+2025-04-20 14:49:55,234 - werkzeug - INFO -  * Restarting with stat
+2025-04-20 14:49:57,037 - werkzeug - WARNING -  * Debugger is active!
+2025-04-20 14:49:57,042 - werkzeug - INFO -  * Debugger PIN: 158-521-788
+2025-04-20 14:49:57,205 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-04-20 14:50:03,191 - werkzeug - INFO -  * Detected change in 'D:\\projects\\crypt_plus\\services\\policy_enforcement.py', reloading
+2025-04-20 14:50:03,366 - werkzeug - INFO -  * Restarting with stat
+2025-04-20 14:50:04,903 - werkzeug - WARNING -  * Debugger is active!
+2025-04-20 14:50:04,917 - werkzeug - INFO -  * Debugger PIN: 158-521-788
+2025-04-20 14:50:05,091 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-04-20 14:50:05,212 - werkzeug - INFO -  * Detected change in 'D:\\projects\\crypt_plus\\services\\policy_enforcement.py', reloading
+2025-04-20 14:50:05,353 - werkzeug - INFO -  * Restarting with stat
+2025-04-20 14:50:06,848 - werkzeug - WARNING -  * Debugger is active!
+2025-04-20 14:50:06,857 - werkzeug - INFO -  * Debugger PIN: 158-521-788
+2025-04-20 14:50:07,018 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-04-20 14:50:09,424 - werkzeug - INFO -  * Detected change in 'D:\\projects\\crypt_plus\\services\\policy_enforcement.py', reloading
+2025-04-20 14:50:09,901 - werkzeug - INFO -  * Restarting with stat
+2025-04-20 14:50:11,614 - werkzeug - WARNING -  * Debugger is active!
+2025-04-20 14:50:11,619 - werkzeug - INFO -  * Debugger PIN: 158-521-788
+2025-04-20 14:50:11,793 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-04-20 17:00:45,100 - werkzeug - INFO -  * Restarting with stat
+2025-04-20 17:00:45,767 - werkzeug - WARNING -  * Debugger is active!
+2025-04-20 17:00:45,789 - werkzeug - INFO -  * Debugger PIN: 158-521-788
+2025-04-20 17:00:45,863 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-04-20 17:01:09,622 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:01:09] "GET / HTTP/1.1" 200 -
+2025-04-20 17:01:09,853 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:01:09] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:01:09,857 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:01:09] "[36mGET /img/security_illustration.svg HTTP/1.1[0m" 304 -
+2025-04-20 17:01:09,857 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:01:09] "[36mGET /img/data_security.svg HTTP/1.1[0m" 304 -
+2025-04-20 17:01:09,949 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:01:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-20 17:01:18,572 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:01:18] "GET /auth/login HTTP/1.1" 200 -
+2025-04-20 17:01:18,603 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:01:18] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:01:22,736 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:01:22] "GET /auth/login HTTP/1.1" 200 -
+2025-04-20 17:01:22,760 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:01:22] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:01:53,497 - controllers.auth - INFO - User admin logged in
+2025-04-20 17:01:53,498 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:01:53] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-04-20 17:01:53,525 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:01:53] "GET /dashboard HTTP/1.1" 200 -
+2025-04-20 17:01:53,548 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:01:53] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:03:06,327 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:03:06] "GET /policy/policies/create HTTP/1.1" 200 -
+2025-04-20 17:03:06,351 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:03:06] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:03:17,134 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:03:17] "[32mPOST /policy/policies/create HTTP/1.1[0m" 302 -
+2025-04-20 17:03:17,152 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:03:17] "GET /policy/policies HTTP/1.1" 200 -
+2025-04-20 17:03:17,176 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:03:17] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:03:21,084 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:03:21] "[35m[1mGET /policy/attributes/create HTTP/1.1[0m" 500 -
+2025-04-20 17:03:21,103 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:03:21] "GET /policy/attributes/create?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-20 17:03:21,105 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:03:21] "GET /policy/attributes/create?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-20 17:03:21,129 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:03:21] "GET /policy/attributes/create?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2025-04-20 17:03:21,135 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:03:21] "GET /policy/attributes/create?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-20 17:03:21,149 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:03:21] "GET /policy/attributes/create?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-20 17:06:49,250 - sqlalchemy.pool.impl.NullPool - ERROR - Exception during reset or similar
+Traceback (most recent call last):
+  File "D:\projects\crypt_plus\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 739, in _finalize_fairy
+    fairy._reset(pool)
+  File "D:\projects\crypt_plus\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 988, in _reset
+    pool._dialect.do_rollback(self)
+  File "D:\projects\crypt_plus\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 682, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 11908 and this is thread id 16532.
+2025-04-20 17:06:49,261 - sqlalchemy.pool.impl.NullPool - ERROR - Exception closing connection <sqlite3.Connection object at 0x00000211870D97B0>
+Traceback (most recent call last):
+  File "D:\projects\crypt_plus\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 739, in _finalize_fairy
+    fairy._reset(pool)
+  File "D:\projects\crypt_plus\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 988, in _reset
+    pool._dialect.do_rollback(self)
+  File "D:\projects\crypt_plus\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 682, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 11908 and this is thread id 16532.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\projects\crypt_plus\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 247, in _close_connection
+    self._dialect.do_close(connection)
+  File "D:\projects\crypt_plus\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 688, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 11908 and this is thread id 16532.
+2025-04-20 17:06:49,278 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:06:49] "GET /policy/attributes/create HTTP/1.1" 200 -
+2025-04-20 17:06:49,306 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:06:49] "GET /css/style.css HTTP/1.1" 200 -
+2025-04-20 17:06:49,307 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:06:49] "GET /js/main.js HTTP/1.1" 200 -
+2025-04-20 17:06:49,421 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:06:49] "GET /policy/attributes/create HTTP/1.1" 200 -
+2025-04-20 17:06:49,446 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:06:49] "GET /css/style.css HTTP/1.1" 200 -
+2025-04-20 17:06:49,446 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:06:49] "GET /js/main.js HTTP/1.1" 200 -
+2025-04-20 17:06:49,990 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:06:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-20 17:07:01,268 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:01] "GET /policy/attributes/create HTTP/1.1" 200 -
+2025-04-20 17:07:01,283 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:01] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:07:01,283 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:01] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2025-04-20 17:07:02,733 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:02] "GET /policy/attributes/create HTTP/1.1" 200 -
+2025-04-20 17:07:02,750 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:02] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:07:02,751 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:02] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2025-04-20 17:07:04,613 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:04] "GET /policy/attributes/create HTTP/1.1" 200 -
+2025-04-20 17:07:04,631 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:04] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:07:04,632 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:04] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2025-04-20 17:07:07,143 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:07] "GET /policy/attributes/create HTTP/1.1" 200 -
+2025-04-20 17:07:07,157 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:07] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:07:07,158 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:07] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2025-04-20 17:07:11,034 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:11] "GET /policy/attributes/create HTTP/1.1" 200 -
+2025-04-20 17:07:11,050 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:11] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:07:11,051 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:11] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2025-04-20 17:07:11,292 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:11] "GET /policy/attributes/create HTTP/1.1" 200 -
+2025-04-20 17:07:11,305 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:11] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2025-04-20 17:07:11,305 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:11] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:07:11,468 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:11] "GET /policy/attributes/create HTTP/1.1" 200 -
+2025-04-20 17:07:11,485 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:11] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2025-04-20 17:07:11,485 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:11] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:07:11,639 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:11] "GET /policy/attributes/create HTTP/1.1" 200 -
+2025-04-20 17:07:11,652 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:11] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:07:11,653 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:11] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2025-04-20 17:07:11,801 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:11] "GET /policy/attributes/create HTTP/1.1" 200 -
+2025-04-20 17:07:11,815 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:11] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:07:11,816 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:11] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2025-04-20 17:07:11,970 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:11] "GET /policy/attributes/create HTTP/1.1" 200 -
+2025-04-20 17:07:11,987 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:11] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:07:11,987 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:11] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2025-04-20 17:07:12,144 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:12] "GET /policy/attributes/create HTTP/1.1" 200 -
+2025-04-20 17:07:12,157 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:12] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:07:12,159 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:12] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2025-04-20 17:07:12,418 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:12] "GET /policy/attributes/create HTTP/1.1" 200 -
+2025-04-20 17:07:12,433 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:12] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2025-04-20 17:07:12,433 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:12] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:07:12,595 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:12] "GET /policy/attributes/create HTTP/1.1" 200 -
+2025-04-20 17:07:12,611 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:12] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:07:12,612 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:12] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2025-04-20 17:07:12,806 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:12] "GET /policy/attributes/create HTTP/1.1" 200 -
+2025-04-20 17:07:12,818 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:12] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:07:12,819 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:12] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2025-04-20 17:07:18,411 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:18] "GET /policy/attributes/create HTTP/1.1" 200 -
+2025-04-20 17:07:18,431 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:18] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:07:18,432 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:18] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2025-04-20 17:07:19,783 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:19] "GET /policy/attributes/create HTTP/1.1" 200 -
+2025-04-20 17:07:19,802 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:19] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:07:19,804 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:07:19] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2025-04-20 17:08:02,151 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:08:02] "GET /policy/attributes/create HTTP/1.1" 200 -
+2025-04-20 17:08:02,169 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:08:02] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:08:02,169 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:08:02] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2025-04-20 17:08:04,037 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:08:04] "GET /policy/attributes/create HTTP/1.1" 200 -
+2025-04-20 17:08:04,052 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:08:04] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:08:04,052 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:08:04] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2025-04-20 17:08:04,255 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:08:04] "GET /policy/attributes/create HTTP/1.1" 200 -
+2025-04-20 17:08:04,273 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:08:04] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2025-04-20 17:08:04,273 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:08:04] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:08:04,417 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:08:04] "GET /policy/attributes/create HTTP/1.1" 200 -
+2025-04-20 17:08:04,431 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:08:04] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2025-04-20 17:08:04,431 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:08:04] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:08:04,650 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:08:04] "GET /policy/attributes/create HTTP/1.1" 200 -
+2025-04-20 17:08:04,667 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:08:04] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:08:04,667 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:08:04] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2025-04-20 17:08:32,148 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:08:32] "GET /policy/attributes/create HTTP/1.1" 200 -
+2025-04-20 17:08:32,160 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:08:32] "GET /css/style.css HTTP/1.1" 200 -
+2025-04-20 17:08:32,380 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:08:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-20 17:08:39,328 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:08:39] "[32mPOST /policy/attributes/create HTTP/1.1[0m" 302 -
+2025-04-20 17:08:39,352 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:08:39] "[35m[1mGET /policy/attributes HTTP/1.1[0m" 500 -
+2025-04-20 17:08:39,377 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:08:39] "GET /policy/attributes?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-20 17:08:39,377 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:08:39] "GET /policy/attributes?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-20 17:08:39,386 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:08:39] "GET /policy/attributes?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2025-04-20 17:08:39,388 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:08:39] "GET /policy/attributes?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-20 17:08:39,405 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:08:39] "GET /policy/attributes?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-20 17:09:32,026 - sqlalchemy.pool.impl.NullPool - ERROR - Exception during reset or similar
+Traceback (most recent call last):
+  File "D:\projects\crypt_plus\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 739, in _finalize_fairy
+    fairy._reset(pool)
+  File "D:\projects\crypt_plus\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 988, in _reset
+    pool._dialect.do_rollback(self)
+  File "D:\projects\crypt_plus\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 682, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 19404 and this is thread id 19480.
+2025-04-20 17:09:32,026 - sqlalchemy.pool.impl.NullPool - ERROR - Exception closing connection <sqlite3.Connection object at 0x00000211870DA4D0>
+Traceback (most recent call last):
+  File "D:\projects\crypt_plus\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 739, in _finalize_fairy
+    fairy._reset(pool)
+  File "D:\projects\crypt_plus\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 988, in _reset
+    pool._dialect.do_rollback(self)
+  File "D:\projects\crypt_plus\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 682, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 19404 and this is thread id 19480.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\projects\crypt_plus\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 247, in _close_connection
+    self._dialect.do_close(connection)
+  File "D:\projects\crypt_plus\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 688, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 19404 and this is thread id 19480.
+2025-04-20 17:09:32,040 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:09:32] "GET /policy/attributes HTTP/1.1" 200 -
+2025-04-20 17:09:32,059 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:09:32] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:09:38,727 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:09:38] "GET /policy/attributes/create HTTP/1.1" 200 -
+2025-04-20 17:09:38,746 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:09:38] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:09:40,888 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:09:40] "GET /policy/policies HTTP/1.1" 200 -
+2025-04-20 17:09:43,440 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:09:43] "GET /policy/policies/1 HTTP/1.1" 200 -
+2025-04-20 17:09:43,461 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:09:43] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:09:43,462 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:09:43] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2025-04-20 17:09:46,131 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:09:46] "GET /policy/policies/1/edit HTTP/1.1" 200 -
+2025-04-20 17:09:46,149 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:09:46] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:09:48,416 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:09:48] "GET /policy/policies/1/audit HTTP/1.1" 200 -
+2025-04-20 17:09:48,435 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:09:48] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:09:51,248 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:09:51] "GET /policy/attributes/create HTTP/1.1" 200 -
+2025-04-20 17:09:51,269 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:09:51] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:09:58,535 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:09:58] "GET /policy/policies HTTP/1.1" 200 -
+2025-04-20 17:09:58,547 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:09:58] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:09:59,857 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:09:59] "GET /about HTTP/1.1" 200 -
+2025-04-20 17:09:59,879 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:09:59] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:09:59,883 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:09:59] "[36mGET /img/access_control.svg HTTP/1.1[0m" 304 -
+2025-04-20 17:09:59,883 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:09:59] "[36mGET /img/initialization.svg HTTP/1.1[0m" 304 -
+2025-04-20 17:09:59,883 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:09:59] "[36mGET /img/encryption.svg HTTP/1.1[0m" 304 -
+2025-04-20 17:10:01,557 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:10:01] "GET /policy/policies HTTP/1.1" 200 -
+2025-04-20 17:10:01,580 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:10:01] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:10:02,201 - services.policy_enforcement - WARNING - Access denied: No policies grant access
+2025-04-20 17:10:02,206 - services.policy_enforcement - ERROR - Error enforcing access: (sqlite3.IntegrityError) NOT NULL constraint failed: policy_audits.policy_id
+[SQL: INSERT INTO policy_audits (policy_id, user_id, timestamp, action, details) VALUES (?, ?, ?, ?, ?)]
+[parameters: (None, 3, '2025-04-20 11:40:02.205597', 'Access:read', '{"data_id": 2, "decision": "DENY", "timestamp": "2025-04-20T11:40:02.204597"}')]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2025-04-20 17:10:02,216 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:10:02] "GET /data/files HTTP/1.1" 200 -
+2025-04-20 17:10:02,240 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:10:02] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:10:04,919 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:10:04] "GET /data/upload HTTP/1.1" 200 -
+2025-04-20 17:10:04,940 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:10:04] "[36mGET /css/style.css HTTP/1.1[0m" 304 -
+2025-04-20 17:10:07,077 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:10:07] "GET /dashboard HTTP/1.1" 200 -
+2025-04-20 17:10:07,095 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 17:10:07] "[36mGET /css/style.css HTTP/1.1[0m" 304 -

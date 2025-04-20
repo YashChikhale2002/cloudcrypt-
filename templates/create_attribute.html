@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Create Attribute - Crypt+{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <div class="max-w-2xl mx-auto">
+        <h1 class="text-2xl font-bold mb-6">Create New Attribute</h1>
+        
+        <div class="bg-white shadow-md rounded-lg p-6">
+            <form method="POST" action="{{ url_for('policy.create_attribute') }}">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700 font-semibold mb-2">Attribute Name</label>
+                    <input type="text" 
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                           id="name" 
+                           name="name" 
+                           required>
+                    <p class="text-sm text-gray-500 mt-1">A unique identifier for this attribute (e.g., "department", "role", "clearance_level")</p>
+                </div>
+                
+                <div class="mb-6">
+                    <label for="description" class="block text-gray-700 font-semibold mb-2">Description</label>
+                    <textarea class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                              id="description" 
+                              name="description" 
+                              rows="3"></textarea>
+                    <p class="text-sm text-gray-500 mt-1">Optional description of what this attribute represents and how it's used</p>
+                </div>
+                
+                <div class="flex justify-between">
+                    <a href="{{ url_for('policy.list_attributes') }}" 
+                       class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-200">
+                        Cancel
+                    </a>
+                    <button type="submit" 
+                            class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-200">
+                        Create Attribute
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

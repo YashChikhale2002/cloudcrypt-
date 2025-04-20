@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+
+{% block title %}Attributes - Crypt+{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto">
+        <div class="flex justify-between items-center mb-6">
+            <h1 class="text-2xl font-bold">Access Control Attributes</h1>
+            {% if current_user.is_admin %}
+            <a href="{{ url_for('policy.create_attribute') }}" 
+               class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg inline-flex items-center">
+                <i class="fas fa-plus mr-2"></i> Create Attribute
+            </a>
+            {% endif %}
+        </div>
+        
+        <div class="bg-white shadow-md rounded-lg mb-8">
+            <div class="border-b border-gray-200 px-6 py-4">
+                <h2 class="font-semibold text-lg">Available Attributes</h2>
+            </div>
+            {% if attributes %}
+            <div class="overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Description</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Used By</th>
+                            {% if current_user.is_admin %}
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                            {% endif %}
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        {% for attr in attributes %}
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 whitespace-nowrap">{{ attr.name }}</td>
+                            <td class="px-6 py-4">{{ attr.description or 'No description provided' }}</td>
+                            <td class="px-6 py-4 whitespace-nowrap">{{ attr.users|length }} user(s)</td>
+                            {% if current_user.is_admin %}
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <form method="POST" action="{{ url_for('policy.delete_attribute', attr_id=attr.id) }}" class="inline">
+                                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                                    <button type="submit" class="text-red-600 hover:text-red-900" 
+                                            onclick="return confirm('Are you sure you want to delete this attribute? This may affect existing policies.')">
+                                        <i class="fas fa-trash"></i> Delete
+                                    </button>
+                                </form>
+                            </td>
+                            {% endif %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% else %}
+            <div class="text-center py-12">
+                <i class="fas fa-tag text-gray-300 text-5xl mb-4"></i>
+                <h3 class="text-xl font-medium text-gray-900 mb-2">No Attributes</h3>
+                <p class="text-gray-500 mb-6">No attributes have been created yet.</p>
+                {% if current_user.is_admin %}
+                <a href="{{ url_for('policy.create_attribute') }}" 
+                   class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg inline-flex items-center">
+                    <i class="fas fa-plus mr-2"></i> Create First Attribute
+                </a>
+                {% endif %}
+            </div>
+            {% endif %}
+        </div>
+        
+        <div class="bg-white shadow-md rounded-lg mb-8">
+            <div class="border-b border-gray-200 px-6 py-4">
+                <h2 class="font-semibold text-lg">About Attributes</h2>
+            </div>
+            <div class="px-6 py-4">
+                <p class="mb-3">Attributes are user characteristics that can be used in attribute-based access control (ABAC) policies. Examples include:</p>
+                <ul class="list-disc pl-5 mb-3 space-y-1">
+                    <li><strong>Department:</strong> Finance, HR, Engineering, Marketing</li>
+                    <li><strong>Role:</strong> Manager, Developer, Analyst</li>
+                    <li><strong>Clearance Level:</strong> Confidential, Secret, Top Secret</li>
+                </ul>
+                <p>Each user can have multiple attributes assigned to them. Policies can then be created to grant access based on these attributes.</p>
+            </div>
+        </div>
+        
+        {% if current_user.is_authenticated %}
+        <div class="mt-8">
+            <h2 class="text-xl font-semibold mb-4">My Attributes</h2>
+            {% if current_user.attributes %}
+            <div class="bg-white shadow-md rounded-lg">
+                <div class="px-6 py-4">
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        {% for attr in current_user.attributes %}
+                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">{{ attr.name }}</span>
+                        {% endfor %}
+                    </div>
+                    <a href="{{ url_for('auth.manage_attributes') }}" 
+                       class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                        <i class="fas fa-cog mr-2"></i> Manage My Attributes
+                    </a>
+                </div>
+            </div>
+            {% else %}
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-md">
+                <div class="flex">
+                    <div class="flex-shrink-0">
+                        <i class="fas fa-info-circle text-blue-400"></i>
+                    </div>
+                    <div class="ml-3">
+                        <p class="text-blue-700">You don't have any attributes assigned to your account.
+                        <a href="{{ url_for('auth.manage_attributes') }}" class="font-medium underline">Add attributes</a> to gain access to resources controlled by attribute-based policies.</p>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
