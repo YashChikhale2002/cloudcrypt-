@@ -8,33 +8,22 @@
         <div class="px-6 py-8">
             <h2 class="text-2xl font-bold text-center text-gray-800 mb-8">Login</h2>
             
-            <form method="POST" action="{{ url_for('auth.login') }}">
+            <form method="post" action="{{ url_for('auth.login') }}">
+                {{ form.csrf_token }}
+                
                 <div class="mb-6">
                     <label for="username" class="block text-gray-700 text-sm font-bold mb-2">Username</label>
-                    <input 
-                        type="text" 
-                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        id="username" 
-                        name="username" 
-                        required 
-                        autofocus
-                    >
+                    {{ form.username(class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500", id="username", required=True, autofocus=True) }}
                 </div>
                 
                 <div class="mb-6">
                     <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password</label>
-                    <input 
-                        type="password" 
-                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        id="password" 
-                        name="password" 
-                        required
-                    >
+                    {{ form.password(class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500", id="password", required=True) }}
                 </div>
                 
                 <div class="mb-6">
                     <label class="flex items-center">
-                        <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" id="remember" name="remember">
+                        {{ form.remember(class="form-checkbox h-5 w-5 text-blue-600", id="remember") }}
                         <span class="ml-2 text-gray-700">Remember me</span>
                     </label>
                 </div>

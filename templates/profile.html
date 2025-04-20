@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+
+{% block title %}Profile - Crypt+{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-2xl font-bold mb-6">Account Profile</h1>
+        
+        <div class="bg-white shadow-md rounded-lg overflow-hidden mb-8">
+            <div class="p-6">
+                <h2 class="text-xl font-semibold mb-4">User Information</h2>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <p class="text-gray-600 text-sm">Username</p>
+                        <p class="font-medium">{{ current_user.username }}</p>
+                    </div>
+                    
+                    <div>
+                        <p class="text-gray-600 text-sm">Email Address</p>
+                        <p class="font-medium">{{ current_user.email }}</p>
+                    </div>
+                    
+                    <div>
+                        <p class="text-gray-600 text-sm">Account Created</p>
+                        <p class="font-medium">{{ current_user.created_at.strftime('%B %d, %Y') }}</p>
+                    </div>
+                    
+                    <div>
+                        <p class="text-gray-600 text-sm">Last Login</p>
+                        <p class="font-medium">
+                            {% if current_user.last_login %}
+                                {{ current_user.last_login.strftime('%B %d, %Y at %H:%M') }}
+                            {% else %}
+                                Never
+                            {% endif %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Change Password Card -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold mb-4">Change Password</h2>
+                    
+                    <form method="POST" action="{{ url_for('auth.change_password') }}">
+                        {{ form.csrf_token }}
+                        
+                        <div class="mb-4">
+                            <label for="{{ form.current_password.id }}" class="block text-gray-700 text-sm font-bold mb-2">
+                                Current Password
+                            </label>
+                            {{ form.current_password(class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline") }}
+                            
+                            {% if form.current_password.errors %}
+                                <p class="text-red-500 text-xs mt-1">{{ form.current_password.errors[0] }}</p>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="{{ form.new_password.id }}" class="block text-gray-700 text-sm font-bold mb-2">
+                                New Password
+                            </label>
+                            {{ form.new_password(class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline") }}
+                            
+                            {% if form.new_password.errors %}
+                                <p class="text-red-500 text-xs mt-1">{{ form.new_password.errors[0] }}</p>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="{{ form.confirm_password.id }}" class="block text-gray-700 text-sm font-bold mb-2">
+                                Confirm New Password
+                            </label>
+                            {{ form.confirm_password(class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline") }}
+                            
+                            {% if form.confirm_password.errors %}
+                                <p class="text-red-500 text-xs mt-1">{{ form.confirm_password.errors[0] }}</p>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="flex justify-end">
+                            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-200">
+                                Update Password
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- User Attributes Card -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold mb-4">Your Attributes</h2>
+                    
+                    {% if current_user.attributes %}
+                        <ul class="space-y-2 mb-6">
+                            {% for attribute in current_user.attributes %}
+                                <li class="flex items-center">
+                                    <span class="inline-block h-2 w-2 rounded-full bg-blue-500 mr-2"></span>
+                                    <span class="font-medium">{{ attribute.name }}</span>
+                                    {% if attribute.description %}
+                                        <span class="text-gray-500 text-sm ml-2">- {{ attribute.description }}</span>
+                                    {% endif %}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p class="text-gray-600 mb-6">You don't have any attributes assigned.</p>
+                    {% endif %}
+                    
+                    <div class="flex justify-end">
+                        <a href="{{ url_for('auth.manage_attributes') }}" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-200">
+                            Manage Attributes
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Security Keys Section (Add if you implement this later) -->
+        <!--
+        <div class="bg-white shadow-md rounded-lg overflow-hidden mt-8">
+            <div class="p-6">
+                <h2 class="text-xl font-semibold mb-4">Encryption Keys</h2>
+                <p class="mb-4 text-gray-700">Your public key is used to encrypt data that only you can access.</p>
+                
+                <div class="bg-gray-100 p-4 rounded mb-4 overflow-x-auto">
+                    <code class="text-xs">{{ current_user.public_key }}</code>
+                </div>
+                
+                <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-4" role="alert">
+                    <p class="font-bold">Important Security Note</p>
+                    <p>Your private key is securely stored and used only when you need to decrypt your data.</p>
+                </div>
+            </div>
+        </div>
+        -->
+        
+        <div class="mt-8 text-center">
+            <a href="{{ url_for('dashboard') }}" class="text-blue-600 hover:text-blue-800">
+                &larr; Back to Dashboard
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

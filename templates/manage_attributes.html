@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}Manage Attributes - Crypt+{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <div class="max-w-2xl mx-auto">
+        <h1 class="text-2xl font-bold mb-6">Manage Your Attributes</h1>
+        
+        <div class="bg-white shadow-md rounded-lg p-6">
+            <p class="mb-4 text-gray-700">Attributes define what data you can access based on policies.</p>
+            
+            <form method="POST" action="{{ url_for('auth.manage_attributes') }}">
+                <!-- CSRF Token -->
+                {{ form.csrf_token }}
+                
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-semibold mb-2">Select Your Attributes:</label>
+                    
+                    <div class="space-y-2">
+                        {% for choice in form.attributes %}
+                        <div class="flex items-center">
+                            {{ choice }}
+                            <label for="{{ choice.id }}" class="ml-2 text-gray-700">
+                                {{ choice.label.text }}
+                                {% for attr in attributes %}
+                                    {% if attr.id == choice.data|int %}
+                                        <span class="text-sm text-gray-500 ml-2">- {{ attr.description }}</span>
+                                    {% endif %}
+                                {% endfor %}
+                            </label>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    
+                    {% if form.attributes.errors %}
+                    <div class="text-red-500 mt-1">
+                        {% for error in form.attributes.errors %}
+                            {{ error }}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+                
+                <div class="flex justify-end">
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-200">
+                        Update Attributes
+                    </button>
+                </div>
+            </form>
+            
+            <div class="mt-6 pt-6 border-t border-gray-200">
+                <a href="{{ url_for('auth.profile') }}" class="text-blue-600 hover:text-blue-800">
+                    &larr; Back to Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -7,6 +7,8 @@ class Config:
     # Flask configuration
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'dev-secret-key-replace-in-production'
     
+    # Rest of your config...
+    
     # Database configuration
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URI') or 'sqlite:///crypt_plus.db'
     SQLALCHEMY_TRACK_MODIFICATIONS = False

@@ -3,6 +3,8 @@ from flask_login import LoginManager, current_user
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, scoped_session
 from flask_talisman import Talisman
+from flask_wtf import CSRFProtect
+
 
 import logging
 import os
@@ -36,6 +38,9 @@ def create_app(config=None):
         app.config.from_object(Config)
     else:
         app.config.from_object(config)
+        
+    csrf = CSRFProtect()
+    csrf.init_app(app)
     
     # Configure Content Security Policy and initialize Talisman
     csp = {

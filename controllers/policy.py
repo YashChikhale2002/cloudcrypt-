@@ -3,6 +3,7 @@ from flask_login import login_required, current_user
 import json
 import logging
 from datetime import datetime
+from forms import PolicyForm, AttributeForm, RemoveShareForm
 
 logger = logging.getLogger(__name__)
 
@@ -36,17 +37,19 @@ def init_policy_controller(db_session):
         from models.policy import Policy
         from models.user import Attribute
         
-        if request.method == 'POST':
+        # Create form
+        form = PolicyForm()
+        
+        # For attribute selection checkboxes - needs to happen outside validate_on_submit
+        attributes = db_session.query(Attribute).all()
+        
+        if form.validate_on_submit():
             # Get form data
-            name = request.form.get('name')
-            description = request.form.get('description')
-            is_active = request.form.get('is_active', 'false') == 'true'
-            priority = int(request.form.get('priority', 1))
-            
-            # Validate input
-            if not name:
-                flash('Policy name is required', 'error')
-                return redirect(request.url)
+            name = form.name.data
+            description = form.description.data
+            is_active = form.is_active.data
+            priority = form.priority.data
+            condition_type = form.condition_type.data
             
             # Check if policy with same name already exists
             existing_policy = db_session.query(Policy).filter_by(name=name).first()
@@ -54,21 +57,20 @@ def init_policy_controller(db_session):
                 flash('A policy with this name already exists', 'error')
                 return redirect(request.url)
             
-            # Get attribute conditions
-            attributes = request.form.getlist('attributes')
-            condition_type = request.form.get('condition_type', 'OR')
+            # Get attribute conditions from form
+            selected_attributes = request.form.getlist('attributes')
             
             # Build policy expression
-            if len(attributes) == 1:
+            if len(selected_attributes) == 1:
                 # Simple condition with one attribute
                 policy_expression = {
-                    'attribute': attributes[0],
+                    'attribute': selected_attributes[0],
                     'value': True
                 }
             else:
                 # Compound condition with multiple attributes
                 conditions = []
-                for attr in attributes:
+                for attr in selected_attributes:
                     conditions.append({
                         'attribute': attr,
                         'value': True
@@ -111,11 +113,10 @@ def init_policy_controller(db_session):
             flash('Policy created successfully', 'success')
             return redirect(url_for('policy.list_policies'))
         
-        # For GET requests, show create form
         # Get available attributes
         attributes = db_session.query(Attribute).all()
         
-        return render_template('create_policy.html', attributes=attributes)
+        return render_template('create_policy.html', form=form, attributes=attributes)
     
     @policy_bp.route('/policies/<int:policy_id>')
     @login_required
@@ -156,17 +157,16 @@ def init_policy_controller(db_session):
             flash('Only administrators and policy creators can edit policies', 'error')
             return redirect(url_for('policy.policy_details', policy_id=policy_id))
         
-        if request.method == 'POST':
+        # Create form
+        form = PolicyForm()
+        
+        if form.validate_on_submit():
             # Get form data
-            name = request.form.get('name')
-            description = request.form.get('description')
-            is_active = request.form.get('is_active', 'false') == 'true'
-            priority = int(request.form.get('priority', 1))
-            
-            # Validate input
-            if not name:
-                flash('Policy name is required', 'error')
-                return redirect(request.url)
+            name = form.name.data
+            description = form.description.data
+            is_active = form.is_active.data
+            priority = form.priority.data
+            condition_type = form.condition_type.data
             
             # Check if policy with same name already exists (excluding current policy)
             existing_policy = db_session.query(Policy).filter(
@@ -179,20 +179,19 @@ def init_policy_controller(db_session):
                 return redirect(request.url)
             
             # Get attribute conditions
-            attributes = request.form.getlist('attributes')
-            condition_type = request.form.get('condition_type', 'OR')
+            selected_attributes = request.form.getlist('attributes')
             
             # Build policy expression
-            if len(attributes) == 1:
+            if len(selected_attributes) == 1:
                 # Simple condition with one attribute
                 policy_expression = {
-                    'attribute': attributes[0],
+                    'attribute': selected_attributes[0],
                     'value': True
                 }
             else:
                 # Compound condition with multiple attributes
                 conditions = []
-                for attr in attributes:
+                for attr in selected_attributes:
                     conditions.append({
                         'attribute': attr,
                         'value': True
@@ -231,7 +230,17 @@ def init_policy_controller(db_session):
             flash('Policy updated successfully', 'success')
             return redirect(url_for('policy.policy_details', policy_id=policy_id))
         
-        # For GET requests, show edit form
+        # For GET requests, prepopulate form fields
+        if request.method == 'GET':
+            form.name.data = policy.name
+            form.description.data = policy.description
+            form.is_active.data = policy.is_active
+            form.priority.data = policy.priority
+            
+            # Set condition type
+            if 'operation' in policy.policy_expression:
+                form.condition_type.data = policy.policy_expression['operation']
+        
         # Get available attributes
         attributes = db_session.query(Attribute).all()
         
@@ -248,10 +257,56 @@ def init_policy_controller(db_session):
             selected_attributes.append(policy.policy_expression['attribute'])
         
         return render_template('edit_policy.html', 
+                            form=form,
                             policy=policy, 
                             attributes=attributes,
                             selected_attributes=selected_attributes,
                             condition_type=condition_type)
+    
+    @policy_bp.route('/policies/<int:policy_id>/toggle', methods=['POST'])
+    @login_required
+    def toggle_policy(policy_id):
+        """Toggle a policy's active status."""
+        from models.policy import Policy, PolicyAudit
+        
+        # Create form for CSRF protection
+        form = RemoveShareForm()
+        
+        if form.validate_on_submit():
+            # Get policy
+            policy = db_session.query(Policy).get(policy_id)
+            
+            if not policy:
+                flash('Policy not found', 'error')
+                return redirect(url_for('policy.list_policies'))
+            
+            # Check if user is authorized (creator or admin)
+            if policy.creator_id != current_user.id and not current_user.is_admin:
+                flash('You are not authorized to modify this policy', 'error')
+                return redirect(url_for('policy.policy_details', policy_id=policy_id))
+            
+            # Toggle the active status
+            policy.is_active = not policy.is_active
+            
+            # Add to audit log
+            audit_log = PolicyAudit(
+                policy_id=policy.id,
+                user_id=current_user.id,
+                action=f"Policy {'activated' if policy.is_active else 'deactivated'}",
+                details=json.dumps({
+                    'timestamp': datetime.utcnow().isoformat(),
+                    'policy_name': policy.name
+                })
+            )
+            
+            db_session.add(audit_log)
+            db_session.commit()
+            
+            flash(f"Policy '{policy.name}' has been {'activated' if policy.is_active else 'deactivated'}", 'success')
+        else:
+            flash('CSRF validation failed', 'error')
+            
+        return redirect(url_for('policy.policy_details', policy_id=policy_id))
     
     @policy_bp.route('/policies/<int:policy_id>/delete', methods=['POST'])
     @login_required
@@ -259,35 +314,42 @@ def init_policy_controller(db_session):
         """Delete a policy."""
         from models.policy import Policy, PolicyAudit
         
-        # Get policy
-        policy = db_session.query(Policy).get(policy_id)
+        # Create form for CSRF protection
+        form = RemoveShareForm()
         
-        if not policy:
-            flash('Policy not found', 'error')
-            return redirect(url_for('policy.list_policies'))
-        
-        # Only admins and policy creators can delete
-        if not current_user.is_admin and policy.creator_id != current_user.id:
-            flash('Only administrators and policy creators can delete policies', 'error')
-            return redirect(url_for('policy.policy_details', policy_id=policy_id))
-        
-        # Log deletion
-        audit = PolicyAudit(
-            policy_id=policy.id,
-            user_id=current_user.id,
-            action='delete',
-            details=json.dumps({
-                'policy_name': policy.name,
-                'timestamp': datetime.utcnow().isoformat()
-            })
-        )
-        db_session.add(audit)
-        
-        # Delete policy
-        db_session.delete(policy)
-        db_session.commit()
-        
-        flash('Policy deleted', 'success')
+        if form.validate_on_submit():
+            # Get policy
+            policy = db_session.query(Policy).get(policy_id)
+            
+            if not policy:
+                flash('Policy not found', 'error')
+                return redirect(url_for('policy.list_policies'))
+            
+            # Only admins and policy creators can delete
+            if not current_user.is_admin and policy.creator_id != current_user.id:
+                flash('Only administrators and policy creators can delete policies', 'error')
+                return redirect(url_for('policy.policy_details', policy_id=policy_id))
+            
+            # Log deletion
+            audit = PolicyAudit(
+                policy_id=policy.id,
+                user_id=current_user.id,
+                action='delete',
+                details=json.dumps({
+                    'policy_name': policy.name,
+                    'timestamp': datetime.utcnow().isoformat()
+                })
+            )
+            db_session.add(audit)
+            
+            # Delete policy
+            db_session.delete(policy)
+            db_session.commit()
+            
+            flash('Policy deleted', 'success')
+        else:
+            flash('CSRF validation failed', 'error')
+            
         return redirect(url_for('policy.list_policies'))
     
     @policy_bp.route('/policies/<int:policy_id>/audit')
@@ -336,15 +398,13 @@ def init_policy_controller(db_session):
             flash('Only administrators can create attributes', 'error')
             return redirect(url_for('policy.list_attributes'))
         
-        if request.method == 'POST':
+        # Create form
+        form = AttributeForm()
+        
+        if form.validate_on_submit():
             # Get form data
-            name = request.form.get('name')
-            description = request.form.get('description', '')
-            
-            # Validate input
-            if not name:
-                flash('Attribute name is required', 'error')
-                return redirect(request.url)
+            name = form.name.data
+            description = form.description.data
             
             # Check if attribute already exists
             existing_attr = db_session.query(Attribute).filter_by(name=name).first()
@@ -365,7 +425,7 @@ def init_policy_controller(db_session):
             flash('Attribute created successfully', 'success')
             return redirect(url_for('policy.list_attributes'))
         
-        return render_template('create_attribute.html')
+        return render_template('create_attribute.html', form=form)
     
     @policy_bp.route('/attributes/<int:attr_id>/delete', methods=['POST'])
     @login_required
@@ -373,23 +433,30 @@ def init_policy_controller(db_session):
         """Delete an attribute."""
         from models.user import Attribute
         
-        # Only admins can delete attributes
-        if not current_user.is_admin:
-            flash('Only administrators can delete attributes', 'error')
-            return redirect(url_for('policy.list_attributes'))
+        # Create form for CSRF protection
+        form = RemoveShareForm()
         
-        # Get attribute
-        attr = db_session.query(Attribute).get(attr_id)
-        
-        if not attr:
-            flash('Attribute not found', 'error')
-            return redirect(url_for('policy.list_attributes'))
-        
-        # Delete attribute
-        db_session.delete(attr)
-        db_session.commit()
-        
-        flash('Attribute deleted', 'success')
+        if form.validate_on_submit():
+            # Only admins can delete attributes
+            if not current_user.is_admin:
+                flash('Only administrators can delete attributes', 'error')
+                return redirect(url_for('policy.list_attributes'))
+            
+            # Get attribute
+            attr = db_session.query(Attribute).get(attr_id)
+            
+            if not attr:
+                flash('Attribute not found', 'error')
+                return redirect(url_for('policy.list_attributes'))
+            
+            # Delete attribute
+            db_session.delete(attr)
+            db_session.commit()
+            
+            flash('Attribute deleted', 'success')
+        else:
+            flash('CSRF validation failed', 'error')
+            
         return redirect(url_for('policy.list_attributes'))
     
     return policy_bp

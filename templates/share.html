@@ -1,0 +1,111 @@
+{% extends "layout.html" %}
+
+{% block title %}Share File - Crypt+{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">Share File: {{ file.name }}</h4>
+                </div>
+                <div class="card-body">
+                    <div class="mb-4">
+                        <p><strong>File:</strong> {{ file.name }}</p>
+                        <p><strong>Size:</strong> {{ file.size | filesizeformat }}</p>
+                        <p><strong>Uploaded:</strong> {{ file.created_at.strftime('%Y-%m-%d %H:%M') }}</p>
+                        <p><strong>Encryption:</strong> {% if file.encrypted %}Encrypted{% else %}Not encrypted{% endif %}</p>
+                    </div>
+
+                    <form method="POST" action="{{ url_for('data.share_file', file_id=file.id) }}">
+                        {{ form.hidden_tag() }}
+                        <div class="form-group mb-3">
+                            <label for="user">Share with User:</label>
+                            {{ form.user_id(class="form-control", required=true) }}
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label>Access Permissions:</label>
+                            <div>
+                                {% for value, label in form.permissions.choices %}
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="permissions" value="{{ value }}" id="perm_{{ value }}" 
+                                        {% if value == 'read' %}checked{% endif %}>
+                                    <label class="form-check-label" for="perm_{{ value }}">{{ label }}</label>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label for="expiration">Expiration (Optional):</label>
+                            {{ form.expiration(class="form-control") }}
+                            <small class="form-text text-muted">Leave blank for no expiration</small>
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label for="policy">Apply Policy:</label>
+                            {{ form.policy_id(class="form-control") }}
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <a href="{{ url_for('data.file_details', file_id=file.id) }}" class="btn btn-secondary">Cancel</a>
+                            {{ form.submit(class="btn btn-primary") }}
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            {% if shared_users %}
+            <div class="card shadow mt-4">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0">Currently Shared With</h5>
+                </div>
+                <div class="card-body p-0">
+                    <table class="table table-striped mb-0">
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Permissions</th>
+                                <th>Shared On</th>
+                                <th>Expires</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for share in shared_users %}
+                            <tr>
+                                <td>{{ share.user.username }}</td>
+                                <td>
+                                    {% for perm in share.permissions.split(',') %}
+                                    <span class="badge bg-primary">{{ perm }}</span>
+                                    {% endfor %}
+                                </td>
+                                <td>{{ share.created_at.strftime('%Y-%m-%d') }}</td>
+                                <td>
+                                    {% if share.expires_at %}
+                                    {{ share.expires_at.strftime('%Y-%m-%d') }}
+                                    {% else %}
+                                    Never
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <form method="POST" action="{{ url_for('data.remove_share', share_id=share.id) }}">
+                                        {{ form.hidden_tag() }}
+                                        <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to remove this share?')">
+                                            <i class="fas fa-trash"></i> Remove
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

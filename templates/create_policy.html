@@ -11,49 +11,36 @@
             </div>
             <div class="px-6 py-6">
                 <form method="POST" action="{{ url_for('policy.create_policy') }}">
+                    <!-- CSRF Token -->
+                    {{ form.csrf_token }}
+                    
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Policy Name</label>
-                            <input 
-                                type="text" 
-                                id="name" 
-                                name="name" 
-                                class="block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm"
-                                required
-                            >
+                            {{ form.name(class="block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm", required="required") }}
+                            {% if form.name.errors %}
+                                {% for error in form.name.errors %}
+                                    <p class="text-red-500 text-xs mt-1">{{ error }}</p>
+                                {% endfor %}
+                            {% endif %}
                         </div>
                         
                         <div>
                             <label for="priority" class="block text-sm font-medium text-gray-700 mb-1">Priority</label>
-                            <select 
-                                id="priority" 
-                                name="priority" 
-                                class="block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm"
-                            >
-                                <option value="1">1 - Low</option>
-                                <option value="2">2 - Medium</option>
-                                <option value="3" selected>3 - High</option>
-                                <option value="4">4 - Critical</option>
-                                <option value="5">5 - Highest</option>
-                            </select>
+                            {{ form.priority(class="block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm") }}
                             <p class="mt-1 text-sm text-gray-500">Higher priority policies are evaluated first.</p>
                         </div>
                     </div>
                     
                     <div class="mb-6">
                         <label for="description" class="block text-sm font-medium text-gray-700 mb-1">Description</label>
-                        <textarea 
-                            id="description" 
-                            name="description" 
-                            rows="2"
-                            class="block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm"
-                        ></textarea>
+                        {{ form.description(class="block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm", rows="2") }}
                     </div>
                     
                     <div class="mb-6">
                         <div class="flex items-center">
                             <label class="relative inline-flex items-center cursor-pointer">
-                                <input type="checkbox" class="sr-only peer" id="is_active" name="is_active" value="true" checked>
+                                {{ form.is_active(class="sr-only peer", id="is_active") }}
                                 <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-green-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-600"></div>
                                 <span class="ml-3 text-gray-700 font-medium">Active</span>
                             </label>
@@ -77,31 +64,12 @@
                         <div class="mb-4">
                             <span class="block text-sm font-medium text-gray-700 mb-2">Condition Type</span>
                             <div class="space-y-2">
+                                {% for subfield in form.condition_type %}
                                 <div class="flex items-center">
-                                    <input 
-                                        id="condition_or" 
-                                        name="condition_type" 
-                                        type="radio" 
-                                        value="OR" 
-                                        checked
-                                        class="focus:ring-green-500 h-4 w-4 text-green-600 border-gray-300"
-                                    >
-                                    <label for="condition_or" class="ml-3 block text-sm font-medium text-gray-700">
-                                        OR (Any selected attribute allows access)
-                                    </label>
+                                    {{ subfield(class="focus:ring-green-500 h-4 w-4 text-green-600 border-gray-300") }}
+                                    {{ subfield.label(class="ml-3 block text-sm font-medium text-gray-700") }}
                                 </div>
-                                <div class="flex items-center">
-                                    <input 
-                                        id="condition_and" 
-                                        name="condition_type" 
-                                        type="radio" 
-                                        value="AND"
-                                        class="focus:ring-green-500 h-4 w-4 text-green-600 border-gray-300"
-                                    >
-                                    <label for="condition_and" class="ml-3 block text-sm font-medium text-gray-700">
-                                        AND (All selected attributes are required)
-                                    </label>
-                                </div>
+                                {% endfor %}
                             </div>
                         </div>
                         
@@ -148,9 +116,7 @@
                         <a href="{{ url_for('policy.list_policies') }}" class="bg-white py-2 px-4 border border-gray-300 rounded-lg shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
                             Cancel
                         </a>
-                        <button type="submit" class="bg-green-600 py-2 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
-                            <i class="fas fa-shield-alt mr-2"></i> Create Policy
-                        </button>
+                        {{ form.submit(class="bg-green-600 py-2 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500") }}
                     </div>
                 </form>
             </div>
