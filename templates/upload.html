@@ -11,15 +11,17 @@
             </div>
             <div class="px-6 py-6">
                 <form method="POST" action="{{ url_for('data.upload') }}" enctype="multipart/form-data">
+                    <!-- CSRF Token -->
+                    {{ form.csrf_token }}
+                    
                     <div class="mb-6">
                         <label for="file" class="block text-gray-700 text-sm font-medium mb-2">Select File</label>
-                        <input 
-                            type="file" 
-                            class="block w-full text-gray-700 bg-white border border-gray-300 rounded-lg p-2.5 cursor-pointer focus:outline-none" 
-                            id="file" 
-                            name="file" 
-                            required
-                        >
+                        {% if form.file.errors %}
+                            {% for error in form.file.errors %}
+                                <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-3 mb-3">{{ error }}</div>
+                            {% endfor %}
+                        {% endif %}
+                        {{ form.file(class="block w-full text-gray-700 bg-white border border-gray-300 rounded-lg p-2.5 cursor-pointer focus:outline-none", id="file") }}
                         <p class="mt-1 text-sm text-gray-500">
                             Maximum file size: {{ config.MAX_CONTENT_LENGTH|filesizeformat }}
                         </p>
@@ -27,9 +29,22 @@
                     </div>
                     
                     <div class="mb-6">
+                        <label for="name" class="block text-gray-700 text-sm font-medium mb-2">Custom Name (Optional)</label>
+                        {{ form.name(class="block w-full text-gray-700 bg-white border border-gray-300 rounded-lg p-2.5 focus:outline-none focus:border-blue-500", id="name", placeholder="Enter a custom name for this file") }}
+                        <p class="mt-1 text-sm text-gray-500">
+                            Leave empty to use the original filename
+                        </p>
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="description" class="block text-gray-700 text-sm font-medium mb-2">Description (Optional)</label>
+                        {{ form.description(class="block w-full text-gray-700 bg-white border border-gray-300 rounded-lg p-2.5 focus:outline-none focus:border-blue-500", id="description", rows="3", placeholder="Enter a description for this file") }}
+                    </div>
+                    
+                    <div class="mb-6">
                         <div class="flex items-center">
                             <label class="relative inline-flex items-center cursor-pointer">
-                                <input type="checkbox" class="sr-only peer" id="encrypt" name="encrypt" value="yes" checked>
+                                {{ form.encrypt(class="sr-only peer", id="encrypt") }}
                                 <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
                                 <span class="ml-3 text-gray-700 font-medium">Encrypt file</span>
                             </label>
@@ -53,7 +68,7 @@
                         </div>
                         
                         {% if policies %}
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 policies-section">
                             {% for policy in policies %}
                             <div class="bg-white border rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
                                 <div class="p-4">
@@ -101,9 +116,7 @@
                         <a href="{{ url_for('data.list_files') }}" class="bg-white py-2 px-4 border border-gray-300 rounded-lg shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                             Cancel
                         </a>
-                        <button type="submit" class="bg-blue-600 py-2 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                            <i class="fas fa-upload mr-2"></i> Upload
-                        </button>
+                        {{ form.submit(class="bg-blue-600 py-2 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500") }}
                     </div>
                 </form>
             </div>

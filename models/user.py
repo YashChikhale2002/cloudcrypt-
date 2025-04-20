@@ -25,10 +25,12 @@ class User(Base, UserMixin):
     created_at = Column(DateTime, default=datetime.utcnow)
     last_login = Column(DateTime, nullable=True)
     public_key = Column(Text, nullable=True)  # For storing user's public key
+    private_key = Column(Text, nullable=True)  # For storing the encrypted private key
     
     # Relationships
     attributes = relationship("Attribute", secondary=user_attributes, back_populates="users")
     owned_data = relationship("Data", back_populates="owner")
+    # Add this to your User class
     
     def set_password(self, password):
         """Hash the password and store it in the database."""

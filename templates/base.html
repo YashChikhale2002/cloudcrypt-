@@ -6,12 +6,8 @@
     <title>{% block title %}Crypt+ Security Platform{% endblock %}</title>
     
     <!-- Tailwind CSS -->
-<!-- In templates/base.html, replace this line: -->
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
-<!-- With this line: -->
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-        <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Font Awesome Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     
     <script>
@@ -73,21 +69,13 @@
                 <div class="hidden md:block">
                     <div class="ml-4 flex items-center md:ml-6">
                         {% if current_user.is_authenticated %}
-                        <div class="relative group">
-                            <button class="flex items-center max-w-xs rounded-full text-sm focus:outline-none">
-                                <i class="fas fa-user-circle text-xl mr-2"></i>
-                                {{ current_user.username }}
-                                <i class="fas fa-chevron-down ml-1 text-xs"></i>
-                            </button>
-                            <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden group-hover:block z-10">
-                                <div class="py-1">
-                                    <a href="{{ url_for('auth.profile') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</a>
-                                    <a href="{{ url_for('auth.manage_attributes') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">My Attributes</a>
-                                    <div class="border-t border-gray-200"></div>
-                                    <a href="{{ url_for('auth.logout') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Logout</a>
-                                </div>
-                            </div>
-                        </div>
+                        <a href="{{ url_for('auth.profile') }}" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700">
+                            <i class="fas fa-user-circle text-xl mr-2"></i>
+                            {{ current_user.username }}
+                        </a>
+                        <a href="{{ url_for('auth.logout') }}" class="ml-3 px-3 py-2 rounded-md text-sm font-medium bg-red-600 hover:bg-red-700 flex items-center">
+                            <i class="fas fa-sign-out-alt mr-2"></i> Logout
+                        </a>
                         {% else %}
                         <a href="{{ url_for('auth.login') }}" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700">Login</a>
                         <a href="{{ url_for('auth.register') }}" class="ml-2 px-3 py-2 rounded-md text-sm font-medium bg-blue-600 hover:bg-blue-700">Register</a>
@@ -134,7 +122,7 @@
                     <div class="mt-3 px-2 space-y-1">
                         <a href="{{ url_for('auth.profile') }}" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">Profile</a>
                         <a href="{{ url_for('auth.manage_attributes') }}" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">My Attributes</a>
-                        <a href="{{ url_for('auth.logout') }}" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">Logout</a>
+                        <a href="{{ url_for('auth.logout') }}" class="block px-3 py-2 rounded-md text-base font-medium bg-red-600 hover:bg-red-700 mx-2">Logout</a>
                     </div>
                 </div>
                 {% else %}

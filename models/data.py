@@ -19,6 +19,7 @@ class Data(Base):
     file_path = Column(String(256), nullable=False)
     file_type = Column(String(64), nullable=False)
     size = Column(Integer, nullable=False)  # Size in bytes
+    description = Column(Text, nullable=True)  # Added description field
     encrypted = Column(Boolean, default=True)
     encrypted_key = Column(Text, nullable=True)  # Encrypted symmetric key
     iv = Column(String(32), nullable=True)  # Initialization vector
@@ -31,6 +32,7 @@ class Data(Base):
     owner = relationship("User", back_populates="owned_data")
     policies = relationship("Policy", secondary=data_policies, back_populates="data")
     access_logs = relationship("AccessLog", back_populates="data")
+    shares = relationship("FileShare", back_populates="file", cascade="all, delete-orphan")
     
     def __repr__(self):
         return f'<Data {self.name}>'
@@ -53,3 +55,23 @@ class AccessLog(Base):
     
     def __repr__(self):
         return f'<AccessLog {self.id} - {self.data_id} - {self.action}>'
+
+class FileShare(Base):
+    """Model for tracking shared files between users."""
+    __tablename__ = 'file_shares'
+    
+    id = Column(Integer, primary_key=True)
+    file_id = Column(Integer, ForeignKey('data.id', ondelete='CASCADE'))
+    user_id = Column(Integer, ForeignKey('users.id', ondelete='CASCADE'))
+    permissions = Column(String(50), nullable=False, default='read')  # comma-separated list
+    created_at = Column(DateTime, default=datetime.utcnow)
+    expires_at = Column(DateTime, nullable=True)
+    policy_id = Column(Integer, ForeignKey('policies.id', ondelete='SET NULL'), nullable=True)
+    
+    # Relationships
+    file = relationship("Data", back_populates="shares")
+    user = relationship("User", backref="shared_files")
+    policy = relationship("Policy", backref="file_shares")
+    
+    def __repr__(self):
+        return f"<FileShare {self.file_id} shared with {self.user_id}>"

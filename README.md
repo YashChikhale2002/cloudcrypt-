@@ -105,6 +105,9 @@ crypt_plus/
 
 7. Access the application at `http://localhost:5000`
 
+
+python create_admin_direct.py admin admin@example.com StrongPassword123
+
 ## Usage
 
 1. **Register an Account**: Create a new user account with username, email, and password.
